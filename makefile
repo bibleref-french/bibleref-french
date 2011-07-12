@@ -4,7 +4,8 @@ PACKAGE = *.dtx \
 		  bibleref-french-francais.pdf \
 		  shorthands.txt \
 		  bibleref-french.ins \
-		  bibleref-french.dtx
+		  bibleref-french.dtx \
+		  *tex
 
 
 
