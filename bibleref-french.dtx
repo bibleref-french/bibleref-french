@@ -38,7 +38,7 @@
 % \fi
 %
 % \CheckSum{0}
-% \changes{v2.0.1}{2011/07/12}{Non breakable space after comma in jerusalem style}
+% \changes{v2.0.1}{2011/07/12}{Non breakable space after comma in jerusalem style. No differences between catholics and protestants about the name of Qohelet}
 % \changes{v2.0}{2011/06/18}{Make dtx, add styles and protestant/catholic
 %                            options, add index patch, add documentation}
 % \changes{v1.0.2}{2011/04/13}{Use non-breakable spaces in book names}
@@ -82,9 +82,7 @@
 %
 % \subsection{Catholic and Protestant book names}
 %
-% A couple of Bible book names differ between Catholic and Protestant French translations.
-% This is the case of Isa\"ie/Esa\"ie and Qoh\'eleth/Ecclesiaste.
-%
+% A book of the old Testament is called Isa\"ie by  catholics and Esa\"ie by protestants.
 % For this reason, this package provides two additional options:
 % \textsf{catholic} (or \textsf{catholique}) and \textsf{protestant}.
 %
@@ -691,12 +689,10 @@ chapitre \protect\numberstringnum{##1}}%
 \newcommand*{\brfullname@protestant}{%
 \brfullname@catholic%
 \def\br@Isaiah{\BRbookof Esa\"ie}%
-\def\br@Ecclesiastes{\BRbookof Eccl\'esiaste}%
 }
 \newcommand*{\brabbrvname@protestant}{%
 \brabbrvname@catholic%
 \def\br@Isaiah{\BRbookof Es}%
-\def\br@Ecclesiastes{\BRbookof Ec}%
 }
 %  \end{macrocode}
 %
