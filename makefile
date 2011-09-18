@@ -25,6 +25,7 @@ bibleref-french-francais.pdf: bibleref-french-francais.tex styles.tex
 	@pdflatex bibleref-french-francais.tex
 bibleref-french.pdf:bibleref-french.dtx styles.tex bibleref-french.sty
 	@pdflatex bibleref-french.dtx
+	makeindex -s gglo.ist -o bibleref-french.gls bibleref-french.glo
 	@pdflatex bibleref-french.dtx
 	
 dist: $(PACKAGE)
