@@ -4,6 +4,10 @@
 \usepackage[T1]{fontenc}
 \usepackage{bibleref-french}
 \usepackage{csquotes}
+\usepackage[citestyle=verbose]{biblatex}
+\renewcommand{\newunitpunct}{\addcomma\addspace}
+\renewcommand{\subtitlepunct}{\addspace\addcolon\addspace}
+\bibliography{inclus/bible.bib}
 \usepackage[breaklinks=true,unicode=true]{hyperref}
 \usepackage{longtable}
 
@@ -89,7 +93,7 @@ En conséquence, \cs{biblerefmap} doit être utilisé avec les \emph{exactes} ch
 
  Si vous utilisez la commande \cs{ibibleref}, vous pouvez constatez que l'ordre de tri dans l'index n'est par défaut pas très bon. Par exemple, livres numérotés sont classés à la lettre `i'. 
 
-Le package fournit des options pour un meilleur tri. Au chargement du package, vous pouvez choisir l'une de ces options :
+Le package fournit des options pour un meilleur tri\footcite[En ce qui concerne la différence entre canon juif / protestant et canon catholique, les auteurs de ce package se sont basés sur le tableau situé dans][]{canons}. Au chargement du package, vous pouvez choisir l'une de ces options :
  \begin{description}
  \item[indexalphac]les livres sont triés par ordre alphabétique, suivant les noms catholiques.
 \item[indexalphap]les livres sont triés par ordre alphabétique, suivant les noms protestants.

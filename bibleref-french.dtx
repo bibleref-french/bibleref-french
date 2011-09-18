@@ -23,6 +23,8 @@
 %<*driver>
 \documentclass{ltxdoc}
 \usepackage[english,french]{babel}
+\usepackage[citestyle=verbose]{biblatex}
+\bibliography{inclus/bible.bib}
 \usepackage{bibleref-french}
 \usepackage{placeins}
 \usepackage[breaklinks=true,unicode=true]{hyperref}
@@ -159,7 +161,7 @@
 %
 % If you use the \cs{ibibleref} command, you can see that the default order is not very good. For example, the numbered books are tidy at the letter `i'. 
 %
-% The package provides options to have a better sorting. You can choose one of this option, at the loading of package.
+% The package provides options to have a better sorting\footcite[About the difference between the  jew / protestant canon and the catholic canon, this authors of this package uses the table in][]{canons}. You can choose one of this option, at the loading of package.
 % \begin{description}
 % \item[indexalphac]the books are sorted in alphabetic order, using catholic names.
 %\item[indexalphap]the books are sorted in alphabetic order, using protestant names.

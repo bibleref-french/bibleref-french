@@ -19,10 +19,15 @@ all:bibleref-french.sty  bibleref-french-francais.pdf  bibleref-french.pdf dist 
 %.sty: %.ins %.dtx 
 	@pdflatex $*.ins
 
-bibleref-french-francais.pdf: bibleref-french-francais.tex inclus/styles.tex inclus/livres.tex
+bibleref-french-francais.pdf: bibleref-french-francais.tex inclus/bible.bib inclus/styles.tex inclus/livres.tex
+	@pdflatex bibleref-french-francais.tex
+	@bibtex bibleref-french-francais
 	@pdflatex bibleref-french-francais.tex
 	@pdflatex bibleref-french-francais.tex
-bibleref-french.pdf:bibleref-french.dtx inclus/styles.tex inclus/livres.tex bibleref-french.sty
+	
+bibleref-french.pdf:bibleref-french.dtx inclus/styles.tex inclus/bible.bib inclus/livres.tex bibleref-french.sty
+	@pdflatex bibleref-french.dtx
+	@bibtex bibleref-french
 	@pdflatex bibleref-french.dtx
 	makeindex -s gglo.ist -o bibleref-french.gls bibleref-french.glo
 	@pdflatex bibleref-french.dtx
