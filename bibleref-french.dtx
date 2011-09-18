@@ -109,21 +109,6 @@
 %
 % The same is true for \verb!brabbrvname! and derivated commands.
 %
-% \subsection{Sorting books in indexes}
-%
-% The \textsf{bibleref} package allows to set the order to books
-% to generate the index of Bible references.
-%
-% However, it uses the full names of Bible books to sort them, which is
-% problematic in French since there are accents in Bible book names.
-%
-% To fix that, this package patches \textsf{bibleref} to use
-% shortcuts instead of full book names.
-%
-% As a result, the \verb!\biblerefmap! must be used with the \emph{exact}
-% string used in the \verb!\ibibleref! calls. For example, if you use
-% \verb!\ibibleref{Jn}(3:16)!, you will need to declare \verb!\biblerefmap{Jn}{43}!
-% instead of \verb!\biblerefmap{Jean}{43}!.
 %
 % \subsection{Non-breakable Spaces}
 %
@@ -148,7 +133,21 @@
 % and the chapter number, it is recommended that you call \verb!\BRallowhypbch!
 % in an environment that contains the problematic paragraph.
 %
-%\section{Sorting in index}
+%\section{Sorting in indexes}
+% The \textsf{bibleref} package allows to set the order to books
+% to generate the index of Bible references.
+%
+% However, it uses the full names of Bible books to sort them, which is
+% problematic in French since there are accents in Bible book names.
+%
+% To fix that, this package patches \textsf{bibleref} to use
+% shortcuts instead of full book names.
+%
+% As a result, the \verb!\biblerefmap! must be used with the \emph{exact}
+% string used in the \verb!\ibibleref! calls. For example, if you use
+% \verb!\ibibleref{Jn}(3:16)!, you will need to declare \verb!\biblerefmap{Jn}{43}!
+% instead of \verb!\biblerefmap{Jean}{43}!.
+%
 % If you use the \cs{ibibleref} command, you can see that the default order is not very good. For example, the numbered books are tidy at the letter `i'. 
 %
 % The package provides options to have a better sorting. You can choose one of this option, at the loading of package.
