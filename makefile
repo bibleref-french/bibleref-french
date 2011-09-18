@@ -9,7 +9,7 @@ PACKAGE = *.dtx \
 
 
 
-.PHONY: all dist clean
+.PHONY: all dist clean cleanall
 
 
 all:bibleref-french.sty  bibleref-french-francais.pdf  bibleref-french.pdf dist clean
@@ -39,5 +39,7 @@ dist: $(PACKAGE)
 	
 
 clean:
-	@$(RM) *.aux *.log *.out *.toc  bibleref-french-francais.pdf bibleref-french.pdf *sty *glo *idx *bib *bbl *blg *xml *gls *ilg
+	@$(RM) *.aux *.log *.out *.toc  *glo *idx *bib *bbl *blg *xml *gls *ilg
 
+cleanall:clean
+	@$(RM) bibleref-french-francais.pdf bibleref-french.pdf *sty
