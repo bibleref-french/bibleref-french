@@ -5,6 +5,7 @@ PACKAGE = *.dtx \
 		  bibleref-french.ins \
 		  bibleref-french.dtx \
 		  inclus/* \
+		  *.tex \
 
 
 
