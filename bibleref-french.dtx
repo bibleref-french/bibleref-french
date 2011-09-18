@@ -160,6 +160,16 @@
 %\item[indexBHS]the books of hebraic bible are sorted like in the classic hebraic bible. The Torah, the Nebiim and the Ketouvim are in the same sections. The deuterocanonical books and the books of New Testament are not sorted.
 %\item[indexTanak]the books of hebraic bible are sorted like in the classic hebraic bible. The Torah, the Nebiim and the Ketouvim are in three sections. The deuterocanonical books and the books of New Testament are not sorted.
 %\end{description}
+%\subsection{Name of parts of bible}
+%It's possible to rename the name of part of Bible. For example to rename `Torah' on `Loi'.
+% To do that, you must redefine, with \cs{renewcommand} one ore more of these commands :
+% \begin{itemize}
+% \item \cs{Torah} ;
+% \item \cs{Nebiim} ;
+% \item \cs{Ketouvim} ;
+% \item \cs{AT};
+% \item \cs{NT}.
+% \end{itemize}
 % \section{Known Issues}
 %
 % \subsection{Book Names in \textsf{text} style}
@@ -715,6 +725,13 @@ chapitre \protect\numberstringnum{##1}}%
 %
 % \subsection{Order in index}
 %\begin{macrocode}
+
+\newcommand{\AT}{Ancien Testament}
+\newcommand{\NT}{Nouveau Testament}
+\newcommand{\Torah}{Torah}
+\newcommand{\Nebiim}{Nebiim}
+\newcommand{\Ketouvim}{Ketouvim}
+
 \newcommand{\refmap@alphap}{
 \biblerefmap{Ab}{01}
 \biblerefmap{Ac}{02}
@@ -869,46 +886,46 @@ chapitre \protect\numberstringnum{##1}}%
 }
 
 \newcommand{\refmap@Tanak}{
-\biblerefmap{Gn}{01@Torah!01}
-\biblerefmap{Ex}{01@Torah!02}
-\biblerefmap{Lv}{01@Torah!03}
-\biblerefmap{Nb}{01@Torah!04}
-\biblerefmap{Dt}{01@Torah!05}
-\biblerefmap{Jos}{02@Nebiim!06}
-\biblerefmap{Jg}{02@Nebiim!07}
-\biblerefmap{IS}{02@Nebiim!08}
-\biblerefmap{IIS}{02@Nebiim!09}
-\biblerefmap{IR}{02@Nebiim!10}
-\biblerefmap{IIR}{02@Nebiim!11}
-\biblerefmap{Is}{02@Nebiim!18}
-\biblerefmap{Es}{02@Nebiim!18}
-\biblerefmap{Jr}{02@Nebiim!19}
-\biblerefmap{Ez}{02@Nebiim!20}
-\biblerefmap{Os}{02@Nebiim!21}
-\biblerefmap{Jl}{02@Nebiim!22}
-\biblerefmap{Am}{02@Nebiim!23}
-\biblerefmap{Ab}{02@Nebiim!24}
-\biblerefmap{Jon}{02@Nebiim!25}
-\biblerefmap{Mi}{02@Nebiim!26}
-\biblerefmap{Na}{02@Nebiim!27}
-\biblerefmap{Ha}{02@Nebiim!28}
-\biblerefmap{So}{02@Nebiim!29}
-\biblerefmap{Ag}{02@Nebiim!30}
-\biblerefmap{Za}{02@Nebiim!31}
-\biblerefmap{Ml}{02@Nebiim!32}
-\biblerefmap{Ps}{03@Ketouvim!33}
-\biblerefmap{Jb}{03@Ketouvim!34}
-\biblerefmap{Pr}{03@Ketouvim!35}
-\biblerefmap{Rt}{03@Ketouvim!36}
-\biblerefmap{Ct}{03@Ketouvim!37}
-\biblerefmap{Qo}{03@Ketouvim!38}
-\biblerefmap{Lm}{03@Ketouvim!39}
-\biblerefmap{Est}{03@Ketouvim!40}
-\biblerefmap{Dn}{03@Ketouvim!41}
-\biblerefmap{Esd}{03@Ketouvim!42}
-\biblerefmap{Ne}{03@Ketouvim!43}
-\biblerefmap{ICh}{03@Ketouvim!44}
-\biblerefmap{IICh}{03@Ketouvim!45}
+\biblerefmap{Gn}{01@\Torah!01}
+\biblerefmap{Ex}{01@\Torah!02}
+\biblerefmap{Lv}{01@\Torah!03}
+\biblerefmap{Nb}{01@\Torah!04}
+\biblerefmap{Dt}{01@\Torah!05}
+\biblerefmap{Jos}{02@\Nebiim!06}
+\biblerefmap{Jg}{02@\Nebiim!07}
+\biblerefmap{IS}{02@\Nebiim!08}
+\biblerefmap{IIS}{02@\Nebiim!09}
+\biblerefmap{IR}{02@\Nebiim!10}
+\biblerefmap{IIR}{02@\Nebiim!11}
+\biblerefmap{Is}{02@\Nebiim!18}
+\biblerefmap{Es}{02@\Nebiim!18}
+\biblerefmap{Jr}{02@\Nebiim!19}
+\biblerefmap{Ez}{02@\Nebiim!20}
+\biblerefmap{Os}{02@\Nebiim!21}
+\biblerefmap{Jl}{02@\Nebiim!22}
+\biblerefmap{Am}{02@\Nebiim!23}
+\biblerefmap{Ab}{02@\Nebiim!24}
+\biblerefmap{Jon}{02@\Nebiim!25}
+\biblerefmap{Mi}{02@\Nebiim!26}
+\biblerefmap{Na}{02@\Nebiim!27}
+\biblerefmap{Ha}{02@\Nebiim!28}
+\biblerefmap{So}{02@\Nebiim!29}
+\biblerefmap{Ag}{02@\Nebiim!30}
+\biblerefmap{Za}{02@\Nebiim!31}
+\biblerefmap{Ml}{02@\Nebiim!32}
+\biblerefmap{Ps}{03@\Ketouvim!33}
+\biblerefmap{Jb}{03@\Ketouvim!34}
+\biblerefmap{Pr}{03@\Ketouvim!35}
+\biblerefmap{Rt}{03@\Ketouvim!36}
+\biblerefmap{Ct}{03@\Ketouvim!37}
+\biblerefmap{Qo}{03@\Ketouvim!38}
+\biblerefmap{Lm}{03@\Ketouvim!39}
+\biblerefmap{Est}{03@\Ketouvim!40}
+\biblerefmap{Dn}{03@\Ketouvim!41}
+\biblerefmap{Esd}{03@\Ketouvim!42}
+\biblerefmap{Ne}{03@\Ketouvim!43}
+\biblerefmap{ICh}{03@\Ketouvim!44}
+\biblerefmap{IICh}{03@\Ketouvim!45}
 }
 
 \newcommand{\refmap@BHS}{
@@ -955,84 +972,84 @@ chapitre \protect\numberstringnum{##1}}%
 }
 
 \newcommand{\refmap@testaments}{
-\biblerefmap{Gn}{Ancien Testament!01}
-\biblerefmap{Ex}{Ancien Testament!02}
-\biblerefmap{Lv}{Ancien Testament!03}
-\biblerefmap{Nb}{Ancien Testament!04}
-\biblerefmap{Dt}{Ancien Testament!05}
+\biblerefmap{Gn}{1@\AT!01}
+\biblerefmap{Ex}{1@\AT!02}
+\biblerefmap{Lv}{1@\AT!03}
+\biblerefmap{Nb}{1@\AT!04}
+\biblerefmap{Dt}{1@\AT!05}
 
-\biblerefmap{Jos}{Ancien Testament!06}
-\biblerefmap{Jg}{Ancien Testament!07}
-\biblerefmap{Rt}{Ancien Testament!08}
-\biblerefmap{IS}{Ancien Testament!09}
-\biblerefmap{IIS}{Ancien Testament!11}
-\biblerefmap{IR}{Ancien Testament!11}
-\biblerefmap{IIR}{Ancien Testament!12}
-\biblerefmap{ICh}{Ancien Testament!13}
-\biblerefmap{IICh}{Ancien Testament!14}
-\biblerefmap{Esd}{Ancien Testament!15}
-\biblerefmap{Ne}{Ancien Testament!16}
-\biblerefmap{Est}{Ancien Testament!17}
-\biblerefmap{Tb}{Ancien Testament!18}
-\biblerefmap{Jdt}{Ancien Testament!19}
-\biblerefmap{IM}{Ancien Testament!20}
-\biblerefmap{IIM}{Ancien Testament!21}
+\biblerefmap{Jos}{1@\AT!06}
+\biblerefmap{Jg}{1@\AT!07}
+\biblerefmap{Rt}{1@\AT!08}
+\biblerefmap{IS}{1@\AT!09}
+\biblerefmap{IIS}{1@\AT!11}
+\biblerefmap{IR}{1@\AT!11}
+\biblerefmap{IIR}{1@\AT!12}
+\biblerefmap{ICh}{1@\AT!13}
+\biblerefmap{IICh}{1@\AT!14}
+\biblerefmap{Esd}{1@\AT!15}
+\biblerefmap{Ne}{1@\AT!16}
+\biblerefmap{Est}{1@\AT!17}
+\biblerefmap{Tb}{1@\AT!18}
+\biblerefmap{Jdt}{1@\AT!19}
+\biblerefmap{IM}{1@\AT!20}
+\biblerefmap{IIM}{1@\AT!21}
 
-\biblerefmap{Jb}{Ancien Testament!22}
-\biblerefmap{Ps}{Ancien Testament!23}
-\biblerefmap{Pr}{Ancien Testament!24}
-\biblerefmap{Qo}{Ancien Testament!25}
-\biblerefmap{Ct}{Ancien Testament!26}
-\biblerefmap{Sg}{Ancien Testament!27}
-\biblerefmap{Si}{Ancien Testament!28}
+\biblerefmap{Jb}{1@\AT!22}
+\biblerefmap{Ps}{1@\AT!23}
+\biblerefmap{Pr}{1@\AT!24}
+\biblerefmap{Qo}{1@\AT!25}
+\biblerefmap{Ct}{1@\AT!26}
+\biblerefmap{Sg}{1@\AT!27}
+\biblerefmap{Si}{1@\AT!28}
 
-\biblerefmap{Is}{Ancien Testament!29}
-\biblerefmap{Es}{Ancien Testament!30}
-\biblerefmap{Jr}{Ancien Testament!31}
-\biblerefmap{Lm}{Ancien Testament!32}
-\biblerefmap{Ba}{Ancien Testament!33}
-\biblerefmap{Ez}{Ancien Testament!34}
-\biblerefmap{Dn}{Ancien Testament!35}
-\biblerefmap{Os}{Ancien Testament!36}
-\biblerefmap{Jl}{Ancien Testament!37}
-\biblerefmap{Am}{Ancien Testament!38}
-\biblerefmap{Ab}{Ancien Testament!39}
-\biblerefmap{Jon}{Ancien Testament!40}
-\biblerefmap{Mi}{Ancien Testament!41}
-\biblerefmap{Na}{Ancien Testament!42}
-\biblerefmap{Ha}{Ancien Testament!43}
-\biblerefmap{So}{Ancien Testament!44}
-\biblerefmap{Ag}{Ancien Testament!45}
-\biblerefmap{Za}{Ancien Testament!46}
-\biblerefmap{Ml}{Ancien Testament!47}
+\biblerefmap{Is}{1@\AT!29}
+\biblerefmap{Es}{1@\AT!30}
+\biblerefmap{Jr}{1@\AT!31}
+\biblerefmap{Lm}{1@\AT!32}
+\biblerefmap{Ba}{1@\AT!33}
+\biblerefmap{Ez}{1@\AT!34}
+\biblerefmap{Dn}{1@\AT!35}
+\biblerefmap{Os}{1@\AT!36}
+\biblerefmap{Jl}{1@\AT!37}
+\biblerefmap{Am}{1@\AT!38}
+\biblerefmap{Ab}{1@\AT!39}
+\biblerefmap{Jon}{1@\AT!40}
+\biblerefmap{Mi}{1@\AT!41}
+\biblerefmap{Na}{1@\AT!42}
+\biblerefmap{Ha}{1@\AT!43}
+\biblerefmap{So}{1@\AT!44}
+\biblerefmap{Ag}{1@\AT!45}
+\biblerefmap{Za}{1@\AT!46}
+\biblerefmap{Ml}{1@\AT!47}
 
-\biblerefmap{Mt}{Nouveau Testament!47}
-\biblerefmap{Mc}{Nouveau Testament!48}
-\biblerefmap{Lc}{Nouveau Testament!49}
-\biblerefmap{Jn}{Nouveau Testament!50}
-\biblerefmap{Ac}{Nouveau Testament!51}
-\biblerefmap{Rm}{Nouveau Testament!52}
-\biblerefmap{ICo}{Nouveau Testament!53}
-\biblerefmap{IICo}{Nouveau Testament!54}
-\biblerefmap{Ga}{Nouveau Testament!55}
-\biblerefmap{Ep}{Nouveau Testament!56}
-\biblerefmap{Ph}{Nouveau Testament!57}
-\biblerefmap{Col}{Nouveau Testament!58}
-\biblerefmap{ITh}{Nouveau Testament!59}
-\biblerefmap{IITh}{Nouveau Testament!60}
-\biblerefmap{ITm}{Nouveau Testament!61}
-\biblerefmap{IITm}{Nouveau Testament!62}
-\biblerefmap{Tt}{Nouveau Testament!63}
-\biblerefmap{Phm}{Nouveau Testament!64}
-\biblerefmap{He}{Nouveau Testament!65}
-\biblerefmap{Jc}{Nouveau Testament!66}
-\biblerefmap{IP}{Nouveau Testament!67}
-\biblerefmap{IIP}{Nouveau Testament!68}
-\biblerefmap{IJn}{Nouveau Testament!69}
-\biblerefmap{IIJn}{Nouveau Testament!70}
-\biblerefmap{IIIJn}{Nouveau Testament!71}
-\biblerefmap{Jude}{Nouveau Testament!72}
-\biblerefmap{Ap}{Nouveau Testament!73}
+\biblerefmap{Mt}{2@\NT!47}
+\biblerefmap{Mc}{2@\NT!48}
+\biblerefmap{Lc}{2@\NT!49}
+\biblerefmap{Jn}{2@\NT!50}
+\biblerefmap{Ac}{2@\NT!51}
+\biblerefmap{Rm}{2@\NT!52}
+\biblerefmap{ICo}{2@\NT!53}
+\biblerefmap{IICo}{2@\NT!54}
+\biblerefmap{Ga}{2@\NT!55}
+\biblerefmap{Ep}{2@\NT!56}
+\biblerefmap{Ph}{2@\NT!57}
+\biblerefmap{Col}{2@\NT!58}
+\biblerefmap{ITh}{2@\NT!59}
+\biblerefmap{IITh}{2@\NT!60}
+\biblerefmap{ITm}{2@\NT!61}
+\biblerefmap{IITm}{2@\NT!62}
+\biblerefmap{Tt}{2@\NT!63}
+\biblerefmap{Phm}{2@\NT!64}
+\biblerefmap{He}{2@\NT!65}
+\biblerefmap{Jc}{2@\NT!66}
+\biblerefmap{IP}{2@\NT!67}
+\biblerefmap{IIP}{2@\NT!68}
+\biblerefmap{IJn}{2@\NT!69}
+\biblerefmap{IIJn}{2@\NT!70}
+\biblerefmap{IIIJn}{2@\NT!71}
+\biblerefmap{Jude}{2@\NT!72}
+\biblerefmap{Ap}{2@\NT!73}
 }
 \newcommand{\refmap@chr}{
 \biblerefmap{Gn}{01}

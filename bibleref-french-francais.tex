@@ -3,6 +3,7 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{bibleref-french}
+\usepackage{csquotes}
 \usepackage[breaklinks=true,unicode=true]{hyperref}
 
 
@@ -90,6 +91,17 @@ Le package fournit des options pour un meilleur tri. Au chargement du package, v
 \item[indexBHS]les livres de la biblique hébraïque sont triés selon les bibles hébraïques classiques. La Torah, les Nebiim et les Ketouvim sont dans la même section. Les Deutérocanoniques et les Livres du Nouveau Testament ne sont pas triés.
 \item[indexTanak]les livres de la biblique hébraïque sont triés selon les bibles hébraïques classiques. La Torah, les Nebiim et les Ketouvim sont dans trois sections distinctes. Les Deutérocanoniques et les Livres du Nouveau Testament ne sont pas triés.
 \end{description}
+
+\subsection{Nom des parties de la Bible}
+Il est possible de renommer le nom des parties de la Bible. Par exemple \enquote{Torah} en \enquote{Loi}.
+Pour ce faire, vous devez redéfinir, avec  \cs{renewcommand} l'une ou plus de ces commandes :
+ \begin{itemize}
+ \item \cs{Torah} ;
+ \item \cs{Nebiim} ;
+ \item \cs{Ketouvim} ;
+ \item \cs{AT};
+ \item \cs{NT}.
+\end{itemize}
 \section{Problèmes connus}
 
 \subsection{Noms de livre dans le style  \textsf{text}}
