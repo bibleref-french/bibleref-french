@@ -23,7 +23,7 @@ all:bibleref-french.sty  bibleref-french-francais.pdf  bibleref-french.pdf dist 
 bibleref-french-francais.pdf: bibleref-french-francais.tex styles.tex
 	@pdflatex bibleref-french-francais.tex
 	@pdflatex bibleref-french-francais.tex
-bibleref-french.pdf:bibleref-french.dtx styles.tex
+bibleref-french.pdf:bibleref-french.dtx styles.tex bibleref-french.sty
 	@pdflatex bibleref-french.dtx
 	@pdflatex bibleref-french.dtx
 	
