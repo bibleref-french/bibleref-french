@@ -5,7 +5,7 @@
 \usepackage{bibleref-french}
 \usepackage{csquotes}
 \usepackage[breaklinks=true,unicode=true]{hyperref}
-
+\usepackage{longtable}
 
 \begin{document}
 
@@ -53,7 +53,13 @@ Au moment du chargement, le schéma de nommage peut être surchargé pour un sty
 
 Il en est de même pour \verb|brabbrvname| et les commandes dérivées.
 
+\subsection{Liste des livres}
 
+\def\abreviation{Abréviation}
+\def\livre{Livre}
+Voici la liste des livres avec leurs abréviations :
+
+\input{livres}
 
 \subsection{Espaces insécables}
 
