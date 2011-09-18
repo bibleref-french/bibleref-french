@@ -4,7 +4,7 @@ The commands are the same, but the abreviations and the names of the bible books
 in french, and the field's separators are like in French (ie. Ex 1, 2 and not Ex 1:2).  A 
 biblerefstyle was defined :"abrege" : print the french shorthands for books.
 
-The list of shorthands of books is joined. 
+The list of shorthands of books on the documentation. 
 
 See the manual of bibleref for commands. 
 
@@ -16,6 +16,6 @@ traduits en français, et le séparateurs de champs suivent les conventions fran
 Ex 1, 12 et pas Ex 1:12). Un style bibleref "abrege" a été défini : il imprime les 
 abréviations françaises pour les livres.
 
-La liste des abréviations est jointe. 
+La liste des abréviations est dans la documentation.
 
 Voir le manuel de Bibleref pour les commandes.
