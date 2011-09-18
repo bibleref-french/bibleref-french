@@ -24,6 +24,7 @@
 \documentclass{ltxdoc}
 \usepackage[english,french]{babel}
 \usepackage{bibleref-french}
+\usepackage{placeins}
 \usepackage[breaklinks=true,unicode=true]{hyperref}
 \EnableCrossrefs
 \CodelineIndex
@@ -57,6 +58,7 @@
 %You can see a french version of this documentation on the file \href{bibleref-french-francais.pdf}{bibleref-french-francais.pdf}.
 % \end{abstract}
 %
+%\tableofcontents
 % \section{Usage}
 %
 % This package inherits the commands from the \textsf{bibleref} package.
@@ -169,7 +171,7 @@
 %\end{center}
 %\end{table}
 %
-% \StopEventually{\PrintIndex\PrintChanges}
+% \StopEventually{\FloatBarrier\PrintIndex\phantomsection\addcontentsline{toc}{section}{Changes History}\PrintChanges}
 %
 % \section{Implementation}
 %
