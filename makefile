@@ -6,6 +6,7 @@ PACKAGE = *.dtx \
 		  bibleref-french.dtx \
 		  inclus/* \
 		  *.tex \
+		  makefile
 
 
 
