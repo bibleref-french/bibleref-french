@@ -40,7 +40,7 @@ dist: $(PACKAGE)
 	
 
 clean:
-	@$(RM) *.aux *.log *.out *.toc  *glo *idx *bib *bbl *blg *xml *gls *ilg
+	@$(RM) *.aux *.log *.out *.toc  *glo *idx *bib *bbl *blg *xml *gls *ilg *gz *ind
 
 cleanall:clean
-	@$(RM) bibleref-french-francais.pdf bibleref-french.pdf *sty
+	@$(RM) bibleref-french-francais.pdf bibleref-french.pdf test.pdf *sty
