@@ -44,7 +44,7 @@ Les styles sont notés dans le tableau~\ref{tab:styles}.
 
 \subsection{Noms catholique ou protestant des livres}
 
-Un livre de l'ancien Testament s'appelle Isaïe chez les catholiques et Esaïe chez les protestants.
+Un livre de l'Ancien Testament s'appelle Isaïe chez les catholiques et Esaïe chez les protestants.
 Pour cette raison ce package fournit deux options supplémentaires :  \textsf{catholic} (ou \textsf{catholique}) et \textsf{protestant}. 
 
 L'option \textsf{catholic} ne fait habituellement rien, puisque c'est l'option par défaut. Cependant, appeler  \verb!\brfullname@catholic! fournira un résumé de tous les noms catholiques de livres.
@@ -97,14 +97,15 @@ Le package fournit des options pour un meilleur tri\footcite[Pour l'Ancien Testa
  \begin{description}
  \item[indexalphac]les livres sont triés par ordre alphabétique, suivant les noms catholiques.
 \item[indexalphap]les livres sont triés par ordre alphabétique, suivant les noms protestants.
-\item[indextestamentsc]les livres sont triés dans l'ordre des bibles catholiques classiques, pour l'ancien Testament  selon la Septante chrétienne. Ancien et Nouveau Testaments forment deux sections.
-\item[indexcatho]les livres sont triés dans l'ordre des bibles catholiques classiques, pour l'ancien Testament  selon la Septante chrétienne. Anciens et Nouveau Testaments ne sont pas séparés.
-\item[indextestamentsp]les livres sont triés dans l'ordre des bibles protestantes classiques, pour l'ancien Testament  selon la bible hébraïque. Ancien et Nouveau Testaments forment deux sections.
-\item[indexprot]les livres sont triés dans l'ordre des bibles catholiques classiques, pour l'ancien Testament  selon la bible hébraïque. Anciens et Nouveau Testaments ne sont pas séparés.
-\item[indexBHS]les livres de la biblique hébraïque sont triés selon les bibles hébraïques classiques. La Torah, les Nebiim et les Ketouvim sont dans la même section. Les Deutérocanoniques et les Livres du Nouveau Testament ne sont pas triés.
-\item[indexTanak]les livres de la biblique hébraïque sont triés selon les bibles hébraïques classiques. La Torah, les Nebiim et les Ketouvim sont dans trois sections distinctes. Les Deutérocanoniques et les Livres du Nouveau Testament ne sont pas triés.
+\item[indexLXX]les livres sont triés dans l'ordre des bibles chrétiennes classiques, pour l'Ancien Testament  selon la Septante. Anciens et Nouveau Testaments ne sont pas séparés.
+\item[indextestamentsL]les livres sont triés dans l'ordre des bibles chrétiennes classiques, pour l'Ancien Testament  selon la Septante. Ancien et Nouveau Testaments forment deux sections.
+\item[indexTOB]les livres sont triés dans l'ordre des bibles catholiques classiques, \emph{Traduction Œcuméniques de la Bible}, pour l'Ancien Testament  selon la bible hébraïque, suivie des deutérocanoniques. Anciens et Nouveau Testaments ne sont pas séparés.
+\item[indextestamentsT]les livres sont triés dans l'ordre de la \emph{Traduction Œcuméniques de la Bible}, pour l'Ancien Testament  selon la bible hébraïque, suivie des deutérocanoniques. Ancien et Nouveau Testaments forment deux sections.
+\item[indexBHS]les livres de la biblique hébraïque sont triés selon les bibles hébraïques classiques. La Torah, les Nebiim et les Ketouvim sont dans la même section. Les deutérocanoniques et les Livres du Nouveau Testament ne sont pas triés.
+\item[indexTanak]les livres de la biblique hébraïque sont triés selon les bibles hébraïques classiques. La Torah, les Nebiim et les Ketouvim sont dans trois sections distinctes. Les deutérocanoniques et les Livres du Nouveau Testament ne sont pas triés.
 \end{description}
 
+Pour les options \verb|indexTOB| et \verb|indextestamentsT|, le livre d'Esther est considéré dans sa version hébraïque, et est donc rangé parmis les  écrits.
 \subsection{Nom des parties de la Bible}
 Il est possible de renommer le nom des parties de la Bible. Par exemple \enquote{Torah} en \enquote{Loi}.
 Pour ce faire, vous devez redéfinir, avec  \cs{renewcommand} l'une ou plus de ces commandes :

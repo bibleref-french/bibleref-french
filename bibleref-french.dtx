@@ -22,6 +22,8 @@
 %
 %<*driver>
 \documentclass{ltxdoc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[english,french]{babel}
 \usepackage[citestyle=verbose]{biblatex}
 \bibliography{inclus/bible.bib}
@@ -90,7 +92,7 @@
 %
 % \subsection{Catholic and Protestant book names}
 %
-% A book of the old Testament is called Isa\"ie by  catholics and Esa\"ie by protestants.
+% A book of the Old Testament is called Isa\"ie by  catholics and Esa\"ie by protestants.
 % For this reason, this package provides two additional options:
 % \textsf{catholic} (or \textsf{catholique}) and \textsf{protestant}.
 %
@@ -161,17 +163,19 @@
 %
 % If you use the \cs{ibibleref} command, you can see that the default order is not very good. For example, the numbered books are tidy at the letter `i'. 
 %
-% The package provides options to have a better sorting\footcite[For the old testament, the protestants follow the jew canon for his content, but they follow the sorting of   the catholic canon. See][]{canons}. You can choose one of this option, at the loading of package.
+% The package provides options to have a better sorting\footcite[For the Old Testament, the protestants follow the jew canon for his content, but they follow the sorting of   the catholic canon. See][]{canons}. You can choose one of this option, at the loading of package.
 % \begin{description}
 % \item[indexalphac]the books are sorted in alphabetic order, using catholic names.
 %\item[indexalphap]the books are sorted in alphabetic order, using protestant names.
-%\item[indextestamentsc]the books are sorted in the order of classic catholics bibles, for the Old Testament in accordance with the christian Septuagint. Old and New Testaments make two sections.
-%\item[indexcatho]the books are sorted in the order of classic catholic bibles, for the Old Testament in accordance with the christian Septuagint. Old and New Testament are in the same section.
-%\item[indextestamentsp]the books are sorted in the order of classic protestant bibles, for the Old Testament in accordance with the hebraic Bible. Old and New Testaments make two sections.
-%\item[indexprot]the books are sorted in the order of classic protestant bibles, for the Old Testament in accordance with the christian the hebraic Bible. Old and New Testament are in the same section.
+%\item[indexLXX]the books are sorted in the order of classic christian bibles, for the Old Testament in accordance with Septuagint. Old and New Testament are in the same section.
+%\item[indextestamentsL]the books are sorted in the order of classic christian bibles, for the Old Testament in accordance with the  Septuagint. Old and New Testaments make two sections.
+%\item[indexTOB]the books are sorted in the order of the \emph{Traduction Œcuménique de la Bible}, for the Old Testament in accordance with the hebraic Bible, followed by the deuterocanonical books. Old and New Testament are in the same section.
+%\item[indextestamentsT]the books are sorted in the order of the \emph{Traduction Œcuménique de la Bible}, for the Old Testament in accordance with the hebraic Bible, followed by the deuterocanonical books. Old and New Testaments make two sections.
 %\item[indexBHS]the books of hebraic bible are sorted like in the classic hebraic bible. The Torah, the Nebiim and the Ketouvim are in the same sections. The deuterocanonical books and the books of New Testament are not sorted.
 %\item[indexTanak]the books of hebraic bible are sorted like in the classic hebraic bible. The Torah, the Nebiim and the Ketouvim are in three sections. The deuterocanonical books and the books of New Testament are not sorted.
 %\end{description}
+%
+%For options \verb|indexTOB| et \verb|indextestamentsT|, the book of Esther is view in his hebraic version, and  is put in the writings.
 %\subsection{Name of parts of bible}
 %It's possible to rename the name of part of Bible. For example to rename `Torah' on `Loi'.
 % To do that, you must redefine, with \cs{renewcommand} one ore more of these commands :
@@ -898,33 +902,33 @@ chapitre \protect\numberstringnum{##1}}%
 }
 
 \newcommand{\refmap@Tanak}{
-\biblerefmap{Gn}{01@\Torah!01}
-\biblerefmap{Ex}{01@\Torah!02}
-\biblerefmap{Lv}{01@\Torah!03}
-\biblerefmap{Nb}{01@\Torah!04}
-\biblerefmap{Dt}{01@\Torah!05}
-\biblerefmap{Jos}{02@\Nebiim!06}
-\biblerefmap{Jg}{02@\Nebiim!07}
-\biblerefmap{IS}{02@\Nebiim!08}
-\biblerefmap{IIS}{02@\Nebiim!09}
-\biblerefmap{IR}{02@\Nebiim!10}
-\biblerefmap{IIR}{02@\Nebiim!11}
-\biblerefmap{Is}{02@\Nebiim!18}
-\biblerefmap{Es}{02@\Nebiim!18}
-\biblerefmap{Jr}{02@\Nebiim!19}
-\biblerefmap{Ez}{02@\Nebiim!20}
-\biblerefmap{Os}{02@\Nebiim!21}
-\biblerefmap{Jl}{02@\Nebiim!22}
-\biblerefmap{Am}{02@\Nebiim!23}
-\biblerefmap{Ab}{02@\Nebiim!24}
-\biblerefmap{Jon}{02@\Nebiim!25}
-\biblerefmap{Mi}{02@\Nebiim!26}
-\biblerefmap{Na}{02@\Nebiim!27}
-\biblerefmap{Ha}{02@\Nebiim!28}
-\biblerefmap{So}{02@\Nebiim!29}
-\biblerefmap{Ag}{02@\Nebiim!30}
-\biblerefmap{Za}{02@\Nebiim!31}
-\biblerefmap{Ml}{02@\Nebiim!32}
+\biblerefmap{Gn}{1@\Torah!01}
+\biblerefmap{Ex}{1@\Torah!02}
+\biblerefmap{Lv}{1@\Torah!03}
+\biblerefmap{Nb}{1@\Torah!04}
+\biblerefmap{Dt}{1@\Torah!05}
+\biblerefmap{Jos}{2@\Nebiim!06}
+\biblerefmap{Jg}{2@\Nebiim!07}
+\biblerefmap{IS}{2@\Nebiim!08}
+\biblerefmap{IIS}{2@\Nebiim!09}
+\biblerefmap{IR}{2@\Nebiim!10}
+\biblerefmap{IIR}{2@\Nebiim!11}
+\biblerefmap{Is}{2@\Nebiim!18}
+\biblerefmap{Es}{2@\Nebiim!18}
+\biblerefmap{Jr}{2@\Nebiim!19}
+\biblerefmap{Ez}{2@\Nebiim!20}
+\biblerefmap{Os}{2@\Nebiim!21}
+\biblerefmap{Jl}{2@\Nebiim!22}
+\biblerefmap{Am}{2@\Nebiim!23}
+\biblerefmap{Ab}{2@\Nebiim!24}
+\biblerefmap{Jon}{2@\Nebiim!25}
+\biblerefmap{Mi}{2@\Nebiim!26}
+\biblerefmap{Na}{2@\Nebiim!27}
+\biblerefmap{Ha}{2@\Nebiim!28}
+\biblerefmap{So}{2@\Nebiim!29}
+\biblerefmap{Ag}{2@\Nebiim!30}
+\biblerefmap{Za}{2@\Nebiim!31}
+\biblerefmap{Ml}{2@\Nebiim!32}
 \biblerefmap{Ps}{03@\Ketouvim!33}
 \biblerefmap{Jb}{03@\Ketouvim!34}
 \biblerefmap{Pr}{03@\Ketouvim!35}
@@ -983,7 +987,7 @@ chapitre \protect\numberstringnum{##1}}%
 \biblerefmap{IICh}{45}
 }
 
-\newcommand{\refmap@testamentsc}{
+\newcommand{\refmap@testamentsL}{
 \biblerefmap{Gn}{1@\AT!01}
 \biblerefmap{Ex}{1@\AT!02}
 \biblerefmap{Lv}{1@\AT!03}
@@ -1016,24 +1020,24 @@ chapitre \protect\numberstringnum{##1}}%
 \biblerefmap{Si}{1@\AT!28}
 
 \biblerefmap{Is}{1@\AT!29}
-\biblerefmap{Es}{1@\AT!30}
-\biblerefmap{Jr}{1@\AT!31}
-\biblerefmap{Lm}{1@\AT!32}
-\biblerefmap{Ba}{1@\AT!33}
-\biblerefmap{Ez}{1@\AT!34}
-\biblerefmap{Dn}{1@\AT!35}
-\biblerefmap{Os}{1@\AT!36}
-\biblerefmap{Jl}{1@\AT!37}
-\biblerefmap{Am}{1@\AT!38}
-\biblerefmap{Ab}{1@\AT!39}
-\biblerefmap{Jon}{1@\AT!40}
-\biblerefmap{Mi}{1@\AT!41}
-\biblerefmap{Na}{1@\AT!42}
-\biblerefmap{Ha}{1@\AT!43}
-\biblerefmap{So}{1@\AT!44}
-\biblerefmap{Ag}{1@\AT!45}
-\biblerefmap{Za}{1@\AT!46}
-\biblerefmap{Ml}{1@\AT!47}
+\biblerefmap{Es}{1@\AT!29}
+\biblerefmap{Jr}{1@\AT!30}
+\biblerefmap{Lm}{1@\AT!31}
+\biblerefmap{Ba}{1@\AT!32}
+\biblerefmap{Ez}{1@\AT!33}
+\biblerefmap{Dn}{1@\AT!34}
+\biblerefmap{Os}{1@\AT!35}
+\biblerefmap{Jl}{1@\AT!36}
+\biblerefmap{Am}{1@\AT!37}
+\biblerefmap{Ab}{1@\AT!38}
+\biblerefmap{Jon}{1@\AT!39}
+\biblerefmap{Mi}{1@\AT!40}
+\biblerefmap{Na}{1@\AT!41}
+\biblerefmap{Ha}{1@\AT!42}
+\biblerefmap{So}{1@\AT!43}
+\biblerefmap{Ag}{1@\AT!43}
+\biblerefmap{Za}{1@\AT!45}
+\biblerefmap{Ml}{1@\AT!46}
 
 \biblerefmap{Mt}{2@\NT!47}
 \biblerefmap{Mc}{2@\NT!48}
@@ -1063,7 +1067,7 @@ chapitre \protect\numberstringnum{##1}}%
 \biblerefmap{Jude}{2@\NT!72}
 \biblerefmap{Ap}{2@\NT!73}
 }
-\newcommand{\refmap@catho}{
+\newcommand{\refmap@LXX}{
 \biblerefmap{Gn}{01}
 \biblerefmap{Ex}{02}
 \biblerefmap{Lv}{03}
@@ -1097,23 +1101,23 @@ chapitre \protect\numberstringnum{##1}}%
 
 \biblerefmap{Is}{29}
 \biblerefmap{Es}{29}
-\biblerefmap{Jr}{31}
-\biblerefmap{Lm}{32}
-\biblerefmap{Ba}{33}
-\biblerefmap{Ez}{34}
-\biblerefmap{Dn}{35}
-\biblerefmap{Os}{36}
-\biblerefmap{Jl}{37}
-\biblerefmap{Am}{38}
-\biblerefmap{Ab}{39}
-\biblerefmap{Jon}{40}
-\biblerefmap{Mi}{41}
-\biblerefmap{Na}{42}
-\biblerefmap{Ha}{43}
-\biblerefmap{So}{44}
-\biblerefmap{Ag}{45}
-\biblerefmap{Za}{46}
-\biblerefmap{Ml}{47}
+\biblerefmap{Jr}{30}
+\biblerefmap{Lm}{31}
+\biblerefmap{Ba}{32}
+\biblerefmap{Ez}{33}
+\biblerefmap{Dn}{34}
+\biblerefmap{Os}{35}
+\biblerefmap{Jl}{36}
+\biblerefmap{Am}{37}
+\biblerefmap{Ab}{38}
+\biblerefmap{Jon}{39}
+\biblerefmap{Mi}{40}
+\biblerefmap{Na}{41}
+\biblerefmap{Ha}{42}
+\biblerefmap{So}{43}
+\biblerefmap{Ag}{44}
+\biblerefmap{Za}{45}
+\biblerefmap{Ml}{46}
 
 \biblerefmap{Mt}{47}
 \biblerefmap{Mc}{48}
@@ -1144,7 +1148,9 @@ chapitre \protect\numberstringnum{##1}}%
 \biblerefmap{Ap}{73}
 }
 
-{
+
+
+\newcommand{\refmap@TOB}{
 \biblerefmap{Gn}{01}
 \biblerefmap{Ex}{02}
 \biblerefmap{Lv}{03}
@@ -1156,35 +1162,44 @@ chapitre \protect\numberstringnum{##1}}%
 \biblerefmap{IIS}{09}
 \biblerefmap{IR}{10}
 \biblerefmap{IIR}{11}
-\biblerefmap{Is}{18}
-\biblerefmap{Es}{18}
-\biblerefmap{Jr}{19}
-\biblerefmap{Ez}{20}
-\biblerefmap{Os}{21}
-\biblerefmap{Jl}{22}
-\biblerefmap{Am}{23}
-\biblerefmap{Ab}{24}
-\biblerefmap{Jon}{25}
-\biblerefmap{Mi}{26}
-\biblerefmap{Na}{27}
-\biblerefmap{Ha}{28}
-\biblerefmap{So}{29}
-\biblerefmap{Ag}{30}
-\biblerefmap{Za}{31}
-\biblerefmap{Ml}{32}
-\biblerefmap{Ps}{33}
-\biblerefmap{Jb}{34}
-\biblerefmap{Pr}{35}
-\biblerefmap{Rt}{36}
-\biblerefmap{Ct}{37}
-\biblerefmap{Qo}{38}
-\biblerefmap{Lm}{39}
-\biblerefmap{Est}{40}
-\biblerefmap{Dn}{41}
-\biblerefmap{Esd}{42}
-\biblerefmap{Ne}{43}
-\biblerefmap{ICh}{44}
-\biblerefmap{IICh}{45}
+
+\biblerefmap{Is}{12}
+\biblerefmap{Es}{12}
+\biblerefmap{Jr}{13}
+\biblerefmap{Ez}{14}
+\biblerefmap{Os}{15}
+\biblerefmap{Jl}{16}
+\biblerefmap{Am}{17}
+\biblerefmap{Ab}{18}
+\biblerefmap{Jon}{19}
+\biblerefmap{Mi}{20}
+\biblerefmap{Na}{21}
+\biblerefmap{Ha}{22}
+\biblerefmap{So}{23}
+\biblerefmap{Ag}{24}
+\biblerefmap{Za}{25}
+\biblerefmap{Ml}{26}
+\biblerefmap{Ps}{27}
+\biblerefmap{Jb}{28}
+\biblerefmap{Pr}{29}
+\biblerefmap{Rt}{30}
+\biblerefmap{Ct}{31}
+\biblerefmap{Qo}{32}
+\biblerefmap{Lm}{33}
+\biblerefmap{Est}{34}
+\biblerefmap{Dn}{35}
+\biblerefmap{Esd}{36}
+\biblerefmap{Ne}{37}
+\biblerefmap{ICh}{38}
+\biblerefmap{IICh}{39}
+\biblerefmap{Jdt}{40}
+\biblerefmap{Tb}{41}
+\biblerefmap{IM}{42}
+\biblerefmap{IIM}{43}
+\biblerefmap{Sg}{44}
+\biblerefmap{Si}{45}
+\biblerefmap{Ba}{46}
+
 \biblerefmap{Mt}{47}
 \biblerefmap{Mc}{48}
 \biblerefmap{Lc}{49}
@@ -1214,7 +1229,7 @@ chapitre \protect\numberstringnum{##1}}%
 \biblerefmap{Ap}{73}
 }
 
-\newcommand{\refmap@testamentsp}{
+\newcommand{\refmap@testamentsT}{
 \biblerefmap{Gn}{1@\AT!01}
 \biblerefmap{Ex}{1@\AT!02}
 \biblerefmap{Lv}{1@\AT!03}
@@ -1226,35 +1241,43 @@ chapitre \protect\numberstringnum{##1}}%
 \biblerefmap{IIS}{1@\AT!09}
 \biblerefmap{IR}{1@\AT!10}
 \biblerefmap{IIR}{1@\AT!11}
-\biblerefmap{Is}{1@\AT!18}
-\biblerefmap{Es}{1@\AT!18}
-\biblerefmap{Jr}{1@\AT!19}
-\biblerefmap{Ez}{1@\AT!20}
-\biblerefmap{Os}{1@\AT!21}
-\biblerefmap{Jl}{1@\AT!22}
-\biblerefmap{Am}{1@\AT!23}
-\biblerefmap{Ab}{1@\AT!24}
-\biblerefmap{Jon}{1@\AT!25}
-\biblerefmap{Mi}{1@\AT!26}
-\biblerefmap{Na}{1@\AT!27}
-\biblerefmap{Ha}{1@\AT!28}
-\biblerefmap{So}{1@\AT!29}
-\biblerefmap{Ag}{1@\AT!30}
-\biblerefmap{Za}{1@\AT!31}
-\biblerefmap{Ml}{1@\AT!32}
-\biblerefmap{Ps}{1@\AT!33}
-\biblerefmap{Jb}{1@\AT!34}
-\biblerefmap{Pr}{1@\AT!35}
-\biblerefmap{Rt}{1@\AT!36}
-\biblerefmap{Ct}{1@\AT!37}
-\biblerefmap{Qo}{1@\AT!38}
-\biblerefmap{Lm}{1@\AT!39}
-\biblerefmap{Est}{1@\AT!40}
-\biblerefmap{Dn}{1@\AT!41}
-\biblerefmap{Esd}{1@\AT!42}
-\biblerefmap{Ne}{1@\AT!43}
-\biblerefmap{ICh}{1@\AT!44}
-\biblerefmap{IICh}{1@\AT!45}
+
+\biblerefmap{Is}{1@\AT!12}
+\biblerefmap{Es}{1@\AT!12}
+\biblerefmap{Jr}{1@\AT!13}
+\biblerefmap{Ez}{1@\AT!14}
+\biblerefmap{Os}{1@\AT!15}
+\biblerefmap{Jl}{1@\AT!16}
+\biblerefmap{Am}{1@\AT!17}
+\biblerefmap{Ab}{1@\AT!18}
+\biblerefmap{Jon}{1@\AT!19}
+\biblerefmap{Mi}{1@\AT!20}
+\biblerefmap{Na}{1@\AT!21}
+\biblerefmap{Ha}{1@\AT!22}
+\biblerefmap{So}{1@\AT!23}
+\biblerefmap{Ag}{1@\AT!24}
+\biblerefmap{Za}{1@\AT!25}
+\biblerefmap{Ml}{1@\AT!26}
+\biblerefmap{Ps}{1@\AT!27}
+\biblerefmap{Jb}{1@\AT!28}
+\biblerefmap{Pr}{1@\AT!29}
+\biblerefmap{Rt}{1@\AT!30}
+\biblerefmap{Ct}{1@\AT!31}
+\biblerefmap{Qo}{1@\AT!32}
+\biblerefmap{Lm}{1@\AT!33}
+\biblerefmap{Est}{1@\AT!34}
+\biblerefmap{Dn}{1@\AT!35}
+\biblerefmap{Esd}{1@\AT!36}
+\biblerefmap{Ne}{1@\AT!37}
+\biblerefmap{ICh}{1@\AT!38}
+\biblerefmap{IICh}{1@\AT!39}
+\biblerefmap{Jdt}{1@\AT!40}
+\biblerefmap{Tb}{1@\AT!41}
+\biblerefmap{IM}{1@\AT!42}
+\biblerefmap{IIM}{1@\AT!43}
+\biblerefmap{Sg}{1@\AT!44}
+\biblerefmap{Si}{1@\AT!45}
+\biblerefmap{Ba}{1@\AT!46}
 
 \biblerefmap{Mt}{2@\NT!47}
 \biblerefmap{Mc}{2@\NT!48}
@@ -1307,11 +1330,11 @@ chapitre \protect\numberstringnum{##1}}%
 \DeclareOption{text}{\brs@text}
 \DeclareOption{indexalphac}{\refmap@alphac}
 \DeclareOption{indexalphap}{\refmap@alphap}
-\DeclareOption{indextestamentsc}{\refmap@testamentsc}
-\DeclareOption{indextestamentsp}{\refmap@testamentsp}
+\DeclareOption{indextestamentsL}{\refmap@testamentsL}
+\DeclareOption{indextestamentsT}{\refmap@testamentsT}
 \DeclareOption{indexBHS}{\refmap@BHS}
-\DeclareOption{indexcatho}{\refmap@catho}
-\DeclareOption{indexprot}{\refmap@prot}
+\DeclareOption{indexLXX}{\refmap@LXX}
+\DeclareOption{indexTOB}{\refmap@TOB}
 \DeclareOption{indexTanak}{\refmap@Tanak}
 % Use Catholic names by default
 \let\brfullname\brfullname@catholic
