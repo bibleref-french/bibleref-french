@@ -91,15 +91,15 @@ Pour résoudre cela, ce package modifie \verb|bibleref| pour utiliser les abrév
 En conséquence, \cs{biblerefmap} doit être utilisé avec les \emph{exactes} chaînes de caractères utilisés dans les commandes \cs{ibibleref}. Par exemple, si vous utilisez \verb|\ibibleref{Jn}(3:16)|, vous devrez déclarer \verb|\biblerefmap{Jn}{43}| à la place de \verb|\biblerefmap{Jean}{43}|
 
 
- Si vous utilisez la commande \cs{ibibleref}, vous pouvez constatez que l'ordre de tri dans l'index n'est par défaut pas très bon. Par exemple, livres numérotés sont classés à la lettre `i'. 
+ Si vous utilisez la commande \cs{ibibleref}, vous pouvez constater que l'ordre de tri dans l'index n'est par défaut pas très bon. Par exemple, livres numérotés sont classés à la lettre `i'. 
 
 Le package fournit des options pour un meilleur tri\footcite[Pour l'Ancien Testament les protestants suivent le canon juif pour son contenu mais utilisent l'ordre du canon catholique, voir][]{canons}. Au chargement du package, vous pouvez choisir l'une de ces options :
  \begin{description}
  \item[indexalphac]les livres sont triés par ordre alphabétique, suivant les noms catholiques.
 \item[indexalphap]les livres sont triés par ordre alphabétique, suivant les noms protestants.
-\item[indexLXX]les livres sont triés dans l'ordre des bibles chrétiennes classiques, pour l'Ancien Testament  selon la Septante. Anciens et Nouveau Testaments ne sont pas séparés.
+\item[indexLXX]les livres sont triés dans l'ordre des bibles chrétiennes classiques, pour l'Ancien Testament  selon la Septante. Ancien et Nouveau Testaments ne sont pas séparés.
 \item[indextestamentsL]les livres sont triés dans l'ordre des bibles chrétiennes classiques, pour l'Ancien Testament  selon la Septante. Ancien et Nouveau Testaments forment deux sections.
-\item[indexTOB]les livres sont triés dans l'ordre des bibles catholiques classiques, \emph{Traduction Œcuméniques de la Bible}, pour l'Ancien Testament  selon la bible hébraïque, suivie des deutérocanoniques. Anciens et Nouveau Testaments ne sont pas séparés.
+\item[indexTOB]les livres sont triés dans l'ordre des bibles catholiques classiques, \emph{Traduction Œcuméniques de la Bible}, pour l'Ancien Testament  selon la bible hébraïque, suivie des deutérocanoniques. Ancien et Nouveau Testaments ne sont pas séparés.
 \item[indextestamentsT]les livres sont triés dans l'ordre de la \emph{Traduction Œcuméniques de la Bible}, pour l'Ancien Testament  selon la bible hébraïque, suivie des deutérocanoniques. Ancien et Nouveau Testaments forment deux sections.
 \item[indexBHS]les livres de la biblique hébraïque sont triés selon les bibles hébraïques classiques. La Torah, les Nebiim et les Ketouvim sont dans la même section. Les deutérocanoniques et les Livres du Nouveau Testament ne sont pas triés.
 \item[indexTanak]les livres de la biblique hébraïque sont triés selon les bibles hébraïques classiques. La Torah, les Nebiim et les Ketouvim sont dans trois sections distinctes. Les deutérocanoniques et les Livres du Nouveau Testament ne sont pas triés.
