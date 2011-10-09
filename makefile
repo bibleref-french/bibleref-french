@@ -19,6 +19,7 @@ all:bibleref-french.sty  bibleref-french-francais.pdf  bibleref-french.pdf dist 
 
 
 %.sty: %.ins %.dtx 
+	@rm -f $*.sty
 	@pdflatex $*.ins
 
 bibleref-french-francais.pdf: bibleref-french-francais.tex inclus/bible.bib inclus/styles.tex inclus/livres.tex
