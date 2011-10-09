@@ -186,29 +186,6 @@
 % \item \cs{AT};
 % \item \cs{NT}.
 % \end{itemize}
-% \section{Known Issues}
-%
-% \subsection{Book Names in \textsf{text} style}
-%
-% The \textsf{text} style has to be refined to take in consideration the
-% specificities of French. Table~\ref{tab:textspec} lists these specificities.
-%
-%\begin{table}[tbh]
-%\caption{French specificities in Bible book names, with current issues emphasized} 
-%\label{tab:textspec}
-%\vspace{10pt}
-%\begin{center}
-%\begin{tabular}{lp{0.5\textwidth}}
-%\bfseries English & \bfseries French\\
-%Book of Genesis & Livre \emph{de la} Gen\`ese\\
-%Book of Exodus & Livre \emph{de l'}Exode\\
-%Book of Deuteronomy & Livre \emph{du} Deut\'eronome\\
-%Book of Numbers & Livre \emph{des} Nombres\\
-%Book of Acts & Livre \emph{des} Actes des Ap\^otres\\
-%Book of Revelations & Livre \emph{de l'}Apocalypse\\
-%\end{tabular}
-%\end{center}
-%\end{table}
 %
 % \StopEventually{\FloatBarrier\PrintIndex\phantomsection\addcontentsline{toc}{section}{Changes History}\PrintChanges}
 %
@@ -226,6 +203,13 @@
 % \subsection{Default separators}
 %
 %  \begin{macrocode}
+\newcommand*{\BRbookofp}{}% For proper noun
+\newcommand*{\BRbookofm}{}% For masculine name
+\newcommand*{\BRbookofme}{}% For masculine name preceded by elision
+\newcommand*{\BRbookoff}{}% For feminine name
+\newcommand*{\BRbookoffe}{}% For feminine name preceded by elision
+\newcommand*{\BRbookofpl}{}% For plural name
+\newcommand*{\BRbookofe}{}% For name preceded by elision.
 \renewcommand*{\BRbooknumberstyle}[1]{#1~}%
 \renewcommand*{\BRepistlenumberstyle}[1]{#1~}%
 \renewcommand*{\BRbooktitlestyle}[1]{#1}%
@@ -268,52 +252,52 @@
 %
 %  \begin{macrocode}
 \newcommand*{\brfullname@catholic}{%
-\def\br@Genesis{\BRbookof Gen\`ese}%
-\def\br@Exodus{\BRbookof Exode}%
-\def\br@Leviticus{\BRbookof L\'evitique}%
-\def\br@Numbers{\BRbookof Nombres}%
-\def\br@Deuteronomy{\BRbookof Deut\'eronome}%
-\def\br@Joshua{\BRbookof Josu\'e}%
-\def\br@Judges{\BRbookof Juges}%
-\def\br@Ruth{\BRbookof Ruth}%
-\def\br@ISamuel{\BRbooknumberstyle{1}\BRbookof Samuel}%
-\def\br@IISamuel{\BRbooknumberstyle{2}\BRbookof Samuel}%
-\def\br@IKings{\BRbooknumberstyle{1}\BRbookof Rois}%
-\def\br@IIKings{\BRbooknumberstyle{2}\BRbookof Rois}%
-\def\br@IChronicles{\BRbooknumberstyle{1}\BRbookof Chroniques}%
-\def\br@IIChronicles{\BRbooknumberstyle{2}\BRbookof Chroniques}%
-\def\br@Ezra{\BRbookof Esdras}%
-\def\br@Nehemiah{\BRbookof N\'eh\'emie}%
-\def\br@Tobit{\BRbookof Tobie}%
-\def\br@Judith{\BRbookof Judith}%
-\def\br@Esther{\BRbookof Esther}%
-\def\br@IMaccabees{\BRbooknumberstyle{1}\BRbookof Maccab\'ees}%
-\def\br@IIMaccabees{\BRbooknumberstyle{2}\BRbookof Maccab\'ees}%
-\def\br@Job{\BRbookof Job}%
-\def\br@Psalms{\BRbookof Psaumes}%
-\def\br@Proverbs{\BRbookof Proverbes}%
-\def\br@Ecclesiastes{\BRbookof Qoh\'elet}%
-\def\br@SongofSongs{\BRbookof Cantique des cantiques}%
-\def\br@Wisdom{\BRbookof Sagesse}%
-\def\br@Ecclesiasticus{\BRbookof Siracide}%
-\def\br@Isaiah{\BRbookof Isa\"ie}%
-\def\br@Jeremiah{\BRbookof J\'er\'emie}%
-\def\br@Lamentations{\BRbookof Lamentations}%
-\def\br@Baruch{\BRbookof Baruch}%
-\def\br@Ezekiel{\BRbookof \'Ez\'echiel}%
-\def\br@Daniel{\BRbookof Daniel}%
-\def\br@Hosea{\BRbookof Os\'ee}%
-\def\br@Joel{\BRbookof Jo\"el}%
-\def\br@Amos{\BRbookof Amos}%
-\def\br@Obadiah{\BRbookof Abdias}%
-\def\br@Jonah{\BRbookof Jonas}%
-\def\br@Micah{\BRbookof Mich\'ee}%
-\def\br@Nahum{\BRbookof Nahum}%
-\def\br@Habakkuk{\BRbookof Habaquq}%
-\def\br@Zephaniah{\BRbookof Sophonie}%
-\def\br@Haggai{\BRbookof Agg\'ee}%
-\def\br@Zechariah{\BRbookof Zacharie}%
-\def\br@Malachi{\BRbookof Malachie}%
+\def\br@Genesis{\BRbookoff Gen\`ese}%
+\def\br@Exodus{\BRbookofme Exode}%
+\def\br@Leviticus{\BRbookofm L\'evitique}%
+\def\br@Numbers{\BRbookofpl Nombres}%
+\def\br@Deuteronomy{\BRbookofm Deut\'eronome}%
+\def\br@Joshua{\BRbookofp Josu\'e}%
+\def\br@Judges{\BRbookofpl Juges}%
+\def\br@Ruth{\BRbookofp Ruth}%
+\def\br@ISamuel{\BRbooknumberstyle{1}\BRbookofp Samuel}%
+\def\br@IISamuel{\BRbooknumberstyle{2}\BRbookofp Samuel}%
+\def\br@IKings{\BRbooknumberstyle{1}\BRbookofpl Rois}%
+\def\br@IIKings{\BRbooknumberstyle{2}\BRbookofpl Rois}%
+\def\br@IChronicles{\BRbooknumberstyle{1}\BRbookofpl Chroniques}%
+\def\br@IIChronicles{\BRbooknumberstyle{2}\BRbookofpl Chroniques}%
+\def\br@Ezra{\BRbookofe Esdras}%
+\def\br@Nehemiah{\BRbookofp N\'eh\'emie}%
+\def\br@Tobit{\BRbookofp Tobie}%
+\def\br@Judith{\BRbookofp Judith}%
+\def\br@Esther{\BRbookofe Esther}%
+\def\br@IMaccabees{\BRbooknumberstyle{1}\BRbookofpl Maccab\'ees}%
+\def\br@IIMaccabees{\BRbooknumberstyle{2}\BRbookofpl Maccab\'ees}%
+\def\br@Job{\BRbookofp Job}%
+\def\br@Psalms{\BRbookofpl Psaumes}%
+\def\br@Proverbs{\BRbookofpl Proverbes}%
+\def\br@Ecclesiastes{\BRbookofm Qoh\'elet}%
+\def\br@SongofSongs{\BRbookofm Cantique des cantiques}%
+\def\br@Wisdom{\BRbookoff Sagesse}%
+\def\br@Ecclesiasticus{\BRbookofm Siracide}%
+\def\br@Isaiah{\BRbookofe Isa\"ie}%
+\def\br@Jeremiah{\BRbookofp J\'er\'emie}%
+\def\br@Lamentations{\BRbookofpl Lamentations}%
+\def\br@Baruch{\BRbookofp Baruch}%
+\def\br@Ezekiel{\BRbookofe \'Ez\'echiel}%
+\def\br@Daniel{\BRbookofp Daniel}%
+\def\br@Hosea{\BRbookofe Os\'ee}%
+\def\br@Joel{\BRbookofp Jo\"el}%
+\def\br@Amos{\BRbookofe Amos}%
+\def\br@Obadiah{\BRbookofe Abdias}%
+\def\br@Jonah{\BRbookofp Jonas}%
+\def\br@Micah{\BRbookofp Mich\'ee}%
+\def\br@Nahum{\BRbookofp Nahum}%
+\def\br@Habakkuk{\BRbookofp Habaquq}%
+\def\br@Zephaniah{\BRbookofp Sophonie}%
+\def\br@Haggai{\BRbookofe Agg\'ee}%
+\def\br@Zechariah{\BRbookofp Zacharie}%
+\def\br@Malachi{\BRbookofp Malachie}%
 \def\br@Matthew{\BRgospel Matthieu}%
 \def\br@Mark{\BRgospel Marc}%
 \def\br@Luke{\BRgospel Luc}%
@@ -340,7 +324,7 @@
 \def\br@IIJohn{\BRepistlenumberstyle{2}\BRepistleof Jean}%
 \def\br@IIIJohn{\BRepistlenumberstyle{3}\BRepistleof Jean}%
 \def\br@Jude{\BRepistleof Jude}%
-\def\br@Revelation{\BRbookof Apocalypse}}
+\def\br@Revelation{\BRbookoffe Apocalypse}}
 \brfullname
 %  \end{macrocode}
 %
@@ -714,7 +698,13 @@ Premier %
 }%
 \renewcommand{\BRepistlenumberstyle}[1]{%
 \protect\Ordinalstringnum{##1}\ }%
-\renewcommand{\BRbookof}{Livre de }%
+\renewcommand*{\BRbookofm}{Livre du }% For masculine name
+\renewcommand*{\BRbookofme}{Livre de l'}% For masculine name preceded by elision
+\renewcommand*{\BRbookofp}{Livre de }% For proper noun
+\renewcommand*{\BRbookoff}{Livre de la }% For feminine name
+\renewcommand*{\BRbookoffe}{Livre de l'}% For feminine name precede by elision
+\renewcommand*{\BRbookofpl}{Livre des }% For plural name
+\renewcommand*{\BRbookofe}{Livre d'}% For name preceded by elision.
 \renewcommand{\BRgospel}{\'Evangile selon Saint }%
 \renewcommand{\BRepistletothe}{\'Ep\^itre aux }%
 \renewcommand{\BRepistleto}{\'Ep\^itre \`a }%
@@ -736,7 +726,7 @@ chapitre \protect\numberstringnum{##1}}%
 %  \begin{macrocode}
 \newcommand*{\brfullname@protestant}{%
 \brfullname@catholic%
-\def\br@Isaiah{\BRbookof Esa\"ie}%
+\def\br@Isaiah{\BRbookofe Esa\"ie}%
 }
 \newcommand*{\brabbrvname@protestant}{%
 \brabbrvname@catholic%
