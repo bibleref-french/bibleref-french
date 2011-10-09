@@ -196,7 +196,7 @@
 %  \begin{macrocode}
 \RequirePackage{bibleref}
 \RequirePackage{etoolbox}
-\patchcmd{\@bible@verse}{\@bv@idxsort{\csname br@#1\endcsname}}{\@bv@idxsort{#1}}
+\patchcmd{\@bible@verse}{\@bv@idxsort{\csname br@#1\endcsname}}{\@bv@idxsort{#1}}{}{}
 %  \end{macrocode}
 %
 % 
