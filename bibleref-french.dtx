@@ -706,7 +706,12 @@
 \renewcommand*{\brs@text}{%
 \biblerefstyle{default}%
 \renewcommand{\BRbooknumberstyle}[1]{%
-\protect\Ordinalstringnum{##1}\ }%
+\ifnum ##1 = 1%
+Premier %
+\else%
+\protect\Ordinalstringnum{##1}\ %
+\fi%
+}%
 \renewcommand{\BRepistlenumberstyle}[1]{%
 \protect\Ordinalstringnum{##1}\ }%
 \renewcommand{\BRbookof}{Livre de }%
