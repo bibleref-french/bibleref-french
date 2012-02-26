@@ -44,6 +44,7 @@
 % \fi
 %
 % \CheckSum{0}
+% \changes{v2.3}{2012/02/26}{New style : defaultshorter}
 % \changes{v2.3}{2012/02/26}{Correction of loading package options to take the good style.}
 % \changes{v2.2}{2011/10/09}{Corrections about the style text and the gender of noun, and illusion (ex section "know issues")}
 % \changes{v2.1}{2011/09/18}{New options to manage sorting in index}
@@ -248,6 +249,26 @@
 \renewcommand*{\BRvrsep}{\mbox{--}\nobreak}%
 \renewcommand*{\BRvsep}{ ; }%
 \renewcommand*{\BRperiod}{}}
+\newcommand*{\brs@defaultshorter}{%
+\brabbrvname
+\renewcommand*{\BRbooknumberstyle}[1]{##1~}%
+\renewcommand*{\BRepistlenumberstyle}[1]{##1~}%
+\renewcommand*{\BRbooktitlestyle}[1]{##1}%
+\renewcommand*{\BRchapterstyle}[1]{##1}%
+\renewcommand*{\BRversestyle}[1]{##1}%
+\renewcommand*{\BRversesuffixstyle}[1]{##1}%
+\renewcommand*{\BRbookof}{}%
+\renewcommand*{\BRgospel}{}%
+\renewcommand*{\BRepistletothe}{}%
+\renewcommand*{\BRepistleto}{}%
+\renewcommand*{\BRepistleof}{}%
+\renewcommand*{\BRbkchsep}{~}%
+\renewcommand*{\BRchvsep}{,~}%
+\renewcommand*{\BRchsep}{ ; }%
+\renewcommand*{\BRvrsep}{\mbox{--}\nobreak}%
+\renewcommand*{\BRvsep}{ ; }%
+\renewcommand*{\BRperiod}{}}
+
 %  \end{macrocode}
 %
 % \subsection{Default full book names}
@@ -1317,6 +1338,7 @@ chapitre \protect\numberstringnum{##1}}%
 %
 %  \begin{macrocode}
 \DeclareOption{default}{\brs@default}
+\DeclareOption{defaultshorter}{\brs@defaultshorter}
 \DeclareOption{jerusalem}{\brs@jerusalem}
 \DeclareOption{colombe}{\brs@colombe}
 \DeclareOption{colombefull}{\brs@colombefull}
