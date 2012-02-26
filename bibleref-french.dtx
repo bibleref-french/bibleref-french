@@ -44,6 +44,7 @@
 % \fi
 %
 % \CheckSum{0}
+% \changes{v2.3}{2012/02/26}{Correction of loading package options to take the good style.}
 % \changes{v2.2}{2011/10/09}{Corrections about the style text and the gender of noun, and illusion (ex section "know issues")}
 % \changes{v2.1}{2011/09/18}{New options to manage sorting in index}
 % \changes{v2.0.1}{2011/07/12}{Non breakable space after comma in jerusalem style. No differences between catholics and protestants about the name of Qohelet}
@@ -53,7 +54,7 @@
 %
 % \GetFileInfo{bibleref-french.dtx}
 %
-% \title{The \textsf{bibleref-french} package\thanks{Version 2.2}}
+% \title{The \textsf{bibleref-french} package\thanks{Version 2.3}}
 % \author{Ma\"ieul Rouquette \\ \texttt{maieul at maieul dot net} \& \\ Rapha\"el Pinson \\ \texttt{raphink@gmail.com}}
 %
 % \maketitle
@@ -1317,12 +1318,12 @@ chapitre \protect\numberstringnum{##1}}%
 %  \begin{macrocode}
 \DeclareOption{default}{\brs@default}
 \DeclareOption{jerusalem}{\brs@jerusalem}
-\DeclareOption{colombe}{\brs@jerusalem}
-\DeclareOption{colombefull}{\brs@jerusalem}
-\DeclareOption{NBS}{\brs@jerusalem}
-\DeclareOption{NBSfull}{\brs@jerusalem}
-\DeclareOption{TOB}{\brs@jerusalem}
-\DeclareOption{TOBfull}{\brs@jerusalem}
+\DeclareOption{colombe}{\brs@colombe}
+\DeclareOption{colombefull}{\brs@colombefull}
+\DeclareOption{NBS}{\brs@NBS}
+\DeclareOption{NBSfull}{\brs@NBSfull}
+\DeclareOption{TOB}{\brs@TOB}
+\DeclareOption{TOBfull}{\brs@TOBfull}
 \DeclareOption{text}{\brs@text}
 \DeclareOption{indexalphac}{\refmap@alphac}
 \DeclareOption{indexalphap}{\refmap@alphap}
