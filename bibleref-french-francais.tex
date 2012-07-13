@@ -14,7 +14,7 @@
 \begin{document}
 
 \shorthandoff{:}
-\title{Le package \textsf{bibleref-french}\thanks{Version 2.3}}
+\title{Le package \textsf{bibleref-french}\thanks{Version 2.3.1}}
 \author{Ma\"ieul Rouquette \\ \& \\ Rapha\"el Pinson \\ \texttt{raphink@gmail.com}}
 
 \maketitle
@@ -44,14 +44,14 @@ Les styles sont notés dans le tableau~\ref{tab:styles}.
 
 \subsection{Noms catholique ou protestant des livres}
 
-Un livre de l'Ancien Testament s'appelle Isaïe chez les catholiques et Esaïe chez les protestants.
+Un livre de l'Ancien Testament s'appelle Isaïe chez les catholiques et Ésaïe chez les protestants.
 Pour cette raison ce package fournit deux options supplémentaires :  \textsf{catholic} (ou \textsf{catholique}) et \textsf{protestant}. 
 
 L'option \textsf{catholic} ne fait habituellement rien, puisque c'est l'option par défaut. Cependant, appeler  \verb!\brfullname@catholic! fournira un résumé de tous les noms catholiques de livres.
 
 Tant \verb|\brfullname@catholic| que \verb|\brfullname@protestant| peuvent être utilisés en remplacement à  \verb|brefullname| dans les définitions de styles pour forcer à utiliser l'un ou l'autre des schémas de nommage.
 
-Notez que le style \verb|TOB| utilise les noms catholiques, sauf pour le libre d'Esaïe qui est surchargé.
+Notez que le style \verb|TOB| utilise les noms catholiques, sauf pour le libre d'Ésaïe qui est surchargé.
 
 Au moment du chargement, le schéma de nommage peut être surchargé pour un style donné. Par exemple le style \verb|jerusalem| utilise \verb|\brfullname@catholic| mais vous pouvez utiliser \verb|\usepackage[jerusalem,protestant]{bibleref-french}| pour avoir le style \verb|jerusalem| avec les livres de la Bible Protestante.
 

@@ -44,6 +44,7 @@
 % \fi
 %
 % \CheckSum{0}
+% \changes{v2.3.1}{2012/07/14}{New style : defaultshorter}
 % \changes{v2.3}{2012/02/26}{New style : defaultshorter}
 % \changes{v2.3}{2012/02/26}{Correction of loading package options to take the good style.}
 % \changes{v2.2}{2011/10/09}{Corrections about the style text and the gender of noun, and illusion (ex section "know issues")}
@@ -95,7 +96,7 @@
 %
 % \subsection{Catholic and Protestant book names}
 %
-% A book of the Old Testament is called Isa\"ie by  catholics and Esa\"ie by protestants.
+% A book of the Old Testament is called Isa\"ie by  catholics and \"Esa\"ie by protestants.
 % For this reason, this package provides two additional options:
 % \textsf{catholic} (or \textsf{catholique}) and \textsf{protestant}.
 %
@@ -691,7 +692,7 @@
 \newcommand*{\brs@TOBfull}{%
 \brfullname@catholic
 % TOB uses Esaie like protestant Bibles
-\def\br@Isaiah{\BRbookof Esa\"ie}%
+\def\br@Isaiah{\BRbookof \'Esa\"ie}%
 \renewcommand*{\BRbooknumberstyle}[1]{##1~}%
 \renewcommand*{\BRepistlenumberstyle}[1]{##1~}%
 \renewcommand*{\BRbooktitlestyle}[1]{##1}%
