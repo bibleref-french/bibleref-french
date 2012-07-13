@@ -44,7 +44,7 @@
 % \fi
 %
 % \CheckSum{0}
-% \changes{v2.3.1}{2012/07/14}{New style : defaultshorter}
+% \changes{v2.3.1}{2012/07/14}{Accent on \'Ésaïe}
 % \changes{v2.3}{2012/02/26}{New style : defaultshorter}
 % \changes{v2.3}{2012/02/26}{Correction of loading package options to take the good style.}
 % \changes{v2.2}{2011/10/09}{Corrections about the style text and the gender of noun, and illusion (ex section "know issues")}
@@ -96,7 +96,7 @@
 %
 % \subsection{Catholic and Protestant book names}
 %
-% A book of the Old Testament is called Isa\"ie by  catholics and \"Esa\"ie by protestants.
+% A book of the Old Testament is called Isa\"ie by  catholics and \'Esa\"ie by protestants.
 % For this reason, this package provides two additional options:
 % \textsf{catholic} (or \textsf{catholique}) and \textsf{protestant}.
 %
@@ -109,7 +109,7 @@
 % using either naming scheme.
 %
 % Note that the \textsf{TOB} style uses Catholic book names, except for the book of
-% Esa\"ie, which is overridden.
+% \'Esa\"ie, which is overridden.
 %
 % At loading time, the naming scheme can be overridden for a given style.
 % For example, the \textsf{jerusalem} style uses \verb!\brfullname@catholic!,
@@ -750,7 +750,7 @@ chapitre \protect\numberstringnum{##1}}%
 %  \begin{macrocode}
 \newcommand*{\brfullname@protestant}{%
 \brfullname@catholic%
-\def\br@Isaiah{\BRbookofe Esa\"ie}%
+\def\br@Isaiah{\BRbookofe \'Esa\"ie}%
 }
 \newcommand*{\brabbrvname@protestant}{%
 \brabbrvname@catholic%
