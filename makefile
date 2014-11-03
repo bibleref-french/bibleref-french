@@ -1,12 +1,12 @@
-PACKAGE = *.dtx \
-		  Lacroux-Bible.pdf \
+PACKAGE = 	  Lacroux-Bible.pdf \
 		  bibleref-french.pdf \
 		  bibleref-french-francais.pdf \
 		  bibleref-french.ins \
 		  bibleref-french.dtx \
 		  inclus/* \
 		  *.tex \
-		  makefile
+		  makefile \
+		  README
 
 
 
@@ -37,7 +37,11 @@ bibleref-french.pdf:bibleref-french.dtx inclus/styles.tex inclus/bible.bib inclu
 	
 dist: $(PACKAGE)
 	@$(RM) ../bibleref-french.zip
-	zip ../bibleref-french.zip $(PACKAGE)
+	rm -rf  bibleref-french
+	mkdir bibleref-french
+	ln $(PACKAGE) bibleref-french
+	zip -r ../bibleref-french.zip bibleref-french
+
 	
 
 clean:
