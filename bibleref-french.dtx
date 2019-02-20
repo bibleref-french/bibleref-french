@@ -14,8 +14,8 @@
 %
 % \iffalse
 %<package>\NeedsTeXFormat{LaTeX2e}
-%<package|extract|driver>\def\BRFfileversion{v2.3}%
-%<package|extract|driver>\def\BRFfiledate{2012/02/26}%
+%<package|extract|driver>\def\BRFfileversion{v2.3.2}%
+%<package|extract|driver>\def\BRFfiledate{2019/02/20}%
 %<package|extract|driver>\def\BRFfileinfo{French translation of the bibleref package}%
 %<package>\ProvidesPackage{bibleref-french}
 %<package>   [\BRFfiledate\space\BRFfileversion\space\BRFfileinfo]
@@ -44,6 +44,7 @@
 % \fi
 %
 % \CheckSum{0}
+% \changes{v2.3.2}{2019/02/20}{Compatibility with the new version of bibleref}
 % \changes{v2.3.1}{2012/07/14}{Accent on Ésaïe}
 % \changes{v2.3}{2012/02/26}{New style : defaultshorter}
 % \changes{v2.3}{2012/02/26}{Correction of loading package options to take the good style.}
@@ -60,7 +61,7 @@
 % \author{Ma\"ieul Rouquette \\ \texttt{maieul at maieul dot net} \& \\ Rapha\"el Pinson \\ \texttt{raphink@gmail.com}}
 %
 % \maketitle
-% 
+%
 % \begin{abstract}
 % The \textsf{bibleref-french} package provides a French translation
 % of the \textsf{bibleref} package.
@@ -84,7 +85,7 @@
 %
 %\selectlanguage{french}
 %\begin{table}[tbh]
-%\caption{Bible Citation Styles (can be used as package option or in the argument to 
+%\caption{Bible Citation Styles (can be used as package option or in the argument to
 %\cs{biblerefstyle})}
 %\label{tab:styles}
 %\vspace{10pt}
@@ -165,7 +166,7 @@
 % \verb!\ibibleref{Jn}(3:16)!, you will need to declare \verb!\biblerefmap{Jn}{43}!
 % instead of \verb!\biblerefmap{Jean}{43}!.
 %
-% If you use the \cs{ibibleref} command, you can see that the default order is not very good. For example, the numbered books are tidy at the letter `i'. 
+% If you use the \cs{ibibleref} command, you can see that the default order is not very good. For example, the numbered books are tidy at the letter `i'.
 %
 % The package provides options to have a better sorting\footcite[For the Old Testament, the protestants follow the jew canon for his content, but they follow the sorting of   the catholic canon. See][]{canons}. You can choose one of this option, at the loading of package.
 % \begin{description}
@@ -203,7 +204,7 @@
 \patchcmd{\@bible@verse}{\@bv@idxsort{\csname br@#1\endcsname}}{\@bv@idxsort{#1}}{}{}
 %  \end{macrocode}
 %
-% 
+%
 % \subsection{Default separators}
 %
 %  \begin{macrocode}
@@ -478,7 +479,7 @@
 %\newcommand*\br@Lm{\br@Lamentations}%
 \newcommand*\br@La{\br@Lamentations}%
 %\newcommand*\br@Ba{\br@Baruch}%
-\newcommand*\br@Bar{\br@Baruch}%
+%\newcommand*\br@Bar{\br@Baruch}%
 \newcommand*\br@Ez{\br@Ezekiel}%
 %\newcommand*\br@Dn{\br@Daniel}%
 \newcommand*\br@Da{\br@Daniel}%
@@ -522,7 +523,7 @@
 %\newcommand*\br@IITm{\br@IITimothy}%
 \newcommand*\br@IITi{\br@IITimothy}%
 %\newcommand*\br@Tt{\br@Titus}%
-\newcommand*\br@Ti{\br@Titus}%
+%\newcommand*\br@Ti{\br@Titus}%
 %\newcommand*\br@Phm{\br@Philemon}%
 \newcommand*\br@He{\br@Hebrews}%
 \newcommand*\br@Hebr{\br@Hebrews}%
@@ -1371,7 +1372,7 @@ chapitre \protect\numberstringnum{##1}}%
 \ProcessOptions
 \brfullname
 %  \end{macrocode}
-% 
+%
 % \Finale
 \endinput
 
