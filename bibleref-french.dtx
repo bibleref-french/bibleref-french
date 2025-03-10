@@ -95,7 +95,9 @@
 %\end{center}
 %\end{table}
 %\selectlanguage{english}
-%
+% 
+% When a style uses abbrevated forms, another style, with the same suffixed with \textsf{fullindex} is provided. 
+% This additional style use abbrevated forms for the main text, but full forms for index. 
 % \subsection{Catholic and Protestant book names}
 %
 % A book of the Old Testament is called Isa\"ie by  catholics and \'Esa\"ie by protestants.
@@ -233,7 +235,7 @@
 \renewcommand*{\BRvrsep}{\mbox{--}\nobreak}%
 \renewcommand*{\BRvsep}{ ; }%
 \renewcommand*{\BRperiod}{}
-\renewcommand*{\brs@default}{%
+\renewcommand*{\brs@default}[1][]{%
 \brfullname
 \renewcommand*{\BRbooknumberstyle}[1]{##1~}%
 \renewcommand*{\BRepistlenumberstyle}[1]{##1~}%
@@ -271,166 +273,170 @@
 \renewcommand*{\BRvrsep}{\mbox{--}\nobreak}%
 \renewcommand*{\BRvsep}{ ; }%
 \renewcommand*{\BRperiod}{}}
-
+\newcommand*{\brs@defaultshorterfullindex}{
+	\brs@defaultshorter%
+	\brfullname[i]%
+}
 %  \end{macrocode}
 %
 % \subsection{Default full book names}
 %
 %  \begin{macrocode}
-\newcommand*{\brfullname@catholic}{%
-\def\br@Genesis{\BRbookoff Gen\`ese}%
-\def\br@Exodus{\BRbookofme Exode}%
-\def\br@Leviticus{\BRbookofm L\'evitique}%
-\def\br@Numbers{\BRbookofpl Nombres}%
-\def\br@Deuteronomy{\BRbookofm Deut\'eronome}%
-\def\br@Joshua{\BRbookofp Josu\'e}%
-\def\br@Judges{\BRbookofpl Juges}%
-\def\br@Ruth{\BRbookofp Ruth}%
-\def\br@ISamuel{\BRbooknumberstyle{1}\BRbookofp Samuel}%
-\def\br@IISamuel{\BRbooknumberstyle{2}\BRbookofp Samuel}%
-\def\br@IKings{\BRbooknumberstyle{1}\BRbookofpl Rois}%
-\def\br@IIKings{\BRbooknumberstyle{2}\BRbookofpl Rois}%
-\def\br@IChronicles{\BRbooknumberstyle{1}\BRbookofpl Chroniques}%
-\def\br@IIChronicles{\BRbooknumberstyle{2}\BRbookofpl Chroniques}%
-\def\br@Ezra{\BRbookofe Esdras}%
-\def\br@Nehemiah{\BRbookofp N\'eh\'emie}%
-\def\br@Tobit{\BRbookofp Tobie}%
-\def\br@Judith{\BRbookofp Judith}%
-\def\br@Esther{\BRbookofe Esther}%
-\def\br@IMaccabees{\BRbooknumberstyle{1}\BRbookofpl Maccab\'ees}%
-\def\br@IIMaccabees{\BRbooknumberstyle{2}\BRbookofpl Maccab\'ees}%
-\def\br@Job{\BRbookofp Job}%
-\def\br@Psalms{\BRbookofpl Psaumes}%
-\def\br@Proverbs{\BRbookofpl Proverbes}%
-\def\br@Ecclesiastes{\BRbookofm Qoh\'elet}%
-\def\br@SongofSongs{\BRbookofm Cantique des cantiques}%
-\def\br@Wisdom{\BRbookoff Sagesse}%
-\def\br@Ecclesiasticus{\BRbookofm Siracide}%
-\def\br@Isaiah{\BRbookofe Isa\"ie}%
-\def\br@Jeremiah{\BRbookofp J\'er\'emie}%
-\def\br@Lamentations{\BRbookofpl Lamentations}%
-\def\br@Baruch{\BRbookofp Baruch}%
-\def\br@Ezekiel{\BRbookofe \'Ez\'echiel}%
-\def\br@Daniel{\BRbookofp Daniel}%
-\def\br@Hosea{\BRbookofe Os\'ee}%
-\def\br@Joel{\BRbookofp Jo\"el}%
-\def\br@Amos{\BRbookofe Amos}%
-\def\br@Obadiah{\BRbookofe Abdias}%
-\def\br@Jonah{\BRbookofp Jonas}%
-\def\br@Micah{\BRbookofp Mich\'ee}%
-\def\br@Nahum{\BRbookofp Nahum}%
-\def\br@Habakkuk{\BRbookofp Habaquq}%
-\def\br@Zephaniah{\BRbookofp Sophonie}%
-\def\br@Haggai{\BRbookofe Agg\'ee}%
-\def\br@Zechariah{\BRbookofp Zacharie}%
-\def\br@Malachi{\BRbookofp Malachie}%
-\def\br@Matthew{\BRgospel Matthieu}%
-\def\br@Mark{\BRgospel Marc}%
-\def\br@Luke{\BRgospel Luc}%
-\def\br@John{\BRgospel Jean}%
-\def\br@Acts{Actes des ap\^otres}%
-\def\br@Romans{\BRepistletothe Romains}%
-\def\br@ICorinthians{\BRepistlenumberstyle{1}\BRepistletothe Corinthiens}%
-\def\br@IICorinthians{\BRepistlenumberstyle{2}\BRepistletothe Corinthiens}%
-\def\br@Galatians{\BRepistletothe Galates}%
-\def\br@Ephesians{\BRepistletothe \'Eph\'esiens}%
-\def\br@Philippians{\BRepistletothe Philippiens}%
-\def\br@Colossians{\BRepistletothe Colossiens}%
-\def\br@IThessalonians{\BRepistlenumberstyle{1}\BRepistletothe Thessaloniciens}%
-\def\br@IIThessalonians{\BRepistlenumberstyle{2}\BRepistletothe Thessaloniciens}%
-\def\br@ITimothy{\BRepistlenumberstyle{1}\BRepistleto Timoth\'ee}%
-\def\br@IITimothy{\BRepistlenumberstyle{2}\BRepistleto Timoth\'ee}%
-\def\br@Titus{\BRepistleto Tite}%
-\def\br@Philemon{\BRepistleto Phil\'emon}%
-\def\br@Hebrews{\BRepistletothe H\'ebreux}%
-\def\br@James{\BRepistleof Jacques}%
-\def\br@IPeter{\BRepistlenumberstyle{1}\BRepistleof Pierre}%
-\def\br@IIPeter{\BRepistlenumberstyle{2}\BRepistleof Pierre}%
-\def\br@IJohn{\BRepistlenumberstyle{1}\BRepistleof Jean}%
-\def\br@IIJohn{\BRepistlenumberstyle{2}\BRepistleof Jean}%
-\def\br@IIIJohn{\BRepistlenumberstyle{3}\BRepistleof Jean}%
-\def\br@Jude{\BRepistleof Jude}%
-\def\br@Revelation{\BRbookoffe Apocalypse}}
+\newcommand*{\brfullname@catholic}[1][]{%
+\csdef{br#1@Genesis}{\BRbookoff Gen\`ese}%
+\csdef{br#1@Exodus}{\BRbookofme Exode}%
+\csdef{br#1@Leviticus}{\BRbookofm L\'evitique}%
+\csdef{br#1@Numbers}{\BRbookofpl Nombres}%
+\csdef{br#1@Deuteronomy}{\BRbookofm Deut\'eronome}%
+\csdef{br#1@Joshua}{\BRbookofp Josu\'e}%
+\csdef{br#1@Judges}{\BRbookofpl Juges}%
+\csdef{br#1@Ruth}{\BRbookofp Ruth}%
+\csdef{br#1@ISamuel}{\BRbooknumberstyle{1}\BRbookofp Samuel}%
+\csdef{br#1@IISamuel}{\BRbooknumberstyle{2}\BRbookofp Samuel}%
+\csdef{br#1@IKings}{\BRbooknumberstyle{1}\BRbookofpl Rois}%
+\csdef{br#1@IIKings}{\BRbooknumberstyle{2}\BRbookofpl Rois}%
+\csdef{br#1@IChronicles}{\BRbooknumberstyle{1}\BRbookofpl Chroniques}%
+\csdef{br#1@IIChronicles}{\BRbooknumberstyle{2}\BRbookofpl Chroniques}%
+\csdef{br#1@Ezra}{\BRbookofe Esdras}%
+\csdef{br#1@Nehemiah}{\BRbookofp N\'eh\'emie}%
+\csdef{br#1@Tobit}{\BRbookofp Tobie}%
+\csdef{br#1@Judith}{\BRbookofp Judith}%
+\csdef{br#1@Esther}{\BRbookofe Esther}%
+\csdef{br#1@IMaccabees}{\BRbooknumberstyle{1}\BRbookofpl Maccab\'ees}%
+\csdef{br#1@IIMaccabees}{\BRbooknumberstyle{2}\BRbookofpl Maccab\'ees}%
+\csdef{br#1@Job}{\BRbookofp Job}%
+\csdef{br#1@Psalms}{\BRbookofpl Psaumes}%
+\csdef{br#1@Proverbs}{\BRbookofpl Proverbes}%
+\csdef{br#1@Ecclesiastes}{\BRbookofm Qoh\'elet}%
+\csdef{br#1@SongofSongs}{\BRbookofm Cantique des cantiques}%
+\csdef{br#1@Wisdom}{\BRbookoff Sagesse}%
+\csdef{br#1@Ecclesiasticus}{\BRbookofm Siracide}%
+\csdef{br#1@Isaiah}{\BRbookofe Isa\"ie}%
+\csdef{br#1@Jeremiah}{\BRbookofp J\'er\'emie}%
+\csdef{br#1@Lamentations}{\BRbookofpl Lamentations}%
+\csdef{br#1@Baruch}{\BRbookofp Baruch}%
+\csdef{br#1@Ezekiel}{\BRbookofe \'Ez\'echiel}%
+\csdef{br#1@Daniel}{\BRbookofp Daniel}%
+\csdef{br#1@Hosea}{\BRbookofe Os\'ee}%
+\csdef{br#1@Joel}{\BRbookofp Jo\"el}%
+\csdef{br#1@Amos}{\BRbookofe Amos}%
+\csdef{br#1@Obadiah}{\BRbookofe Abdias}%
+\csdef{br#1@Jonah}{\BRbookofp Jonas}%
+\csdef{br#1@Micah}{\BRbookofp Mich\'ee}%
+\csdef{br#1@Nahum}{\BRbookofp Nahum}%
+\csdef{br#1@Habakkuk}{\BRbookofp Habaquq}%
+\csdef{br#1@Zephaniah}{\BRbookofp Sophonie}%
+\csdef{br#1@Haggai}{\BRbookofe Agg\'ee}%
+\csdef{br#1@Zechariah}{\BRbookofp Zacharie}%
+\csdef{br#1@Malachi}{\BRbookofp Malachie}%
+\csdef{br#1@Matthew}{\BRgospel Matthieu}%
+\csdef{br#1@Mark}{\BRgospel Marc}%
+\csdef{br#1@Luke}{\BRgospel Luc}%
+\csdef{br#1@John}{\BRgospel Jean}%
+\csdef{br#1@Acts}{Actes des ap\^otres}%
+\csdef{br#1@Romans}{\BRepistletothe Romains}%
+\csdef{br#1@ICorinthians}{\BRepistlenumberstyle{1}\BRepistletothe Corinthiens}%
+\csdef{br#1@IICorinthians}{\BRepistlenumberstyle{2}\BRepistletothe Corinthiens}%
+\csdef{br#1@Galatians}{\BRepistletothe Galates}%
+\csdef{br#1@Ephesians}{\BRepistletothe \'Eph\'esiens}%
+\csdef{br#1@Philippians}{\BRepistletothe Philippiens}%
+\csdef{br#1@Colossians}{\BRepistletothe Colossiens}%
+\csdef{br#1@IThessalonians}{\BRepistlenumberstyle{1}\BRepistletothe Thessaloniciens}%
+\csdef{br#1@IIThessalonians}{\BRepistlenumberstyle{2}\BRepistletothe Thessaloniciens}%
+\csdef{br#1@ITimothy}{\BRepistlenumberstyle{1}\BRepistleto Timoth\'ee}%
+\csdef{br#1@IITimothy}{\BRepistlenumberstyle{2}\BRepistleto Timoth\'ee}%
+\csdef{br#1@Titus}{\BRepistleto Tite}%
+\csdef{br#1@Philemon}{\BRepistleto Phil\'emon}%
+\csdef{br#1@Hebrews}{\BRepistletothe H\'ebreux}%
+\csdef{br#1@James}{\BRepistleof Jacques}%
+\csdef{br#1@IPeter}{\BRepistlenumberstyle{1}\BRepistleof Pierre}%
+\csdef{br#1@IIPeter}{\BRepistlenumberstyle{2}\BRepistleof Pierre}%
+\csdef{br#1@IJohn}{\BRepistlenumberstyle{1}\BRepistleof Jean}%
+\csdef{br#1@IIJohn}{\BRepistlenumberstyle{2}\BRepistleof Jean}%
+\csdef{br#1@IIIJohn}{\BRepistlenumberstyle{3}\BRepistleof Jean}%
+\csdef{br#1@Jude}{\BRepistleof Jude}%
+\csdef{br#1@Revelation}{\BRbookoffe Apocalypse}%
+}
 \brfullname
 %  \end{macrocode}
 %
 % \subsection{Abbreviated version}
 %
 %  \begin{macrocode}
-\newcommand*{\brabbrvname@catholic}{%
-\def\br@Genesis{Gn\BRperiod}%
-\def\br@Exodus{Ex\BRperiod}%
-\def\br@Leviticus{Lv\BRperiod}%
-\def\br@Numbers{Nb\BRperiod}%
-\def\br@Deuteronomy{Dt\BRperiod}%
-\def\br@Joshua{Jos\BRperiod}%
-\def\br@Judges{Jg\BRperiod}%
-\def\br@Ruth{Rt\BRperiod}%
-\def\br@ISamuel{\BRbooknumberstyle{1}S\BRperiod}%
-\def\br@IISamuel{\BRbooknumberstyle{2}S\BRperiod}%
-\def\br@IKings{\BRbooknumberstyle{1}R\BRperiod}%
-\def\br@IIKings{\BRbooknumberstyle{2}R\BRperiod}%
-\def\br@IChronicles{\BRbooknumberstyle{1}Ch\BRperiod}%
-\def\br@IIChronicles{\BRbooknumberstyle{2}Ch\BRperiod}%
-\def\br@Ezra{Esd\BRperiod}%
-\def\br@Nehemiah{Ne\BRperiod}%
-\def\br@Tobit{Tb\BRperiod}%
-\def\br@Judith{Jdt\BRperiod}%
-\def\br@Esther{Est\BRperiod}%
-\def\br@IMaccabees{\BRbooknumberstyle{1}M\BRperiod}%
-\def\br@IIMaccabees{\BRbooknumberstyle{2}M\BRperiod}%
-\def\br@Job{Jb\BRperiod}%
-\def\br@Psalms{Ps\BRperiod}%
-\def\br@Proverbs{Pr\BRperiod}%
-\def\br@Ecclesiastes{Qo\BRperiod}%
-\def\br@SongofSongs{Ct\BRperiod}%
-\def\br@Wisdom{Sg\BRperiod}%
-\def\br@Ecclesiasticus{Si\BRperiod}%
-\def\br@Isaiah{Is\BRperiod}%
-\def\br@Jeremiah{Jr\BRperiod}%
-\def\br@Lamentations{Lm\BRperiod}%
-\def\br@Baruch{Ba\BRperiod}%
-\def\br@Ezekiel{Ez\BRperiod}%
-\def\br@Daniel{Dn\BRperiod}%
-\def\br@Hosea{Os\BRperiod}%
-\def\br@Joel{Jl\BRperiod}%
-\def\br@Amos{Am\BRperiod}%
-\def\br@Obadiah{Ab\BRperiod}%
-\def\br@Jonah{Jon\BRperiod}%
-\def\br@Micah{Mi\BRperiod}%
-\def\br@Nahum{Na\BRperiod}%
-\def\br@Habakkuk{Ha\BRperiod}%
-\def\br@Zephaniah{So\BRperiod}%
-\def\br@Haggai{Ag\BRperiod}%
-\def\br@Zechariah{Za\BRperiod}%
-\def\br@Malachi{Ml\BRperiod}%
-\def\br@Matthew{Mt\BRperiod}%
-\def\br@Mark{Mc\BRperiod}%
-\def\br@Luke{Lc\BRperiod}%
-\def\br@John{Jn\BRperiod}%
-\def\br@Acts{Ac\BRperiod}%
-\def\br@Romans{Rm\BRperiod}%
-\def\br@ICorinthians{\BRepistlenumberstyle{1}Co\BRperiod}%
-\def\br@IICorinthians{\BRepistlenumberstyle{2}Co\BRperiod}%
-\def\br@Galatians{Ga\BRperiod}%
-\def\br@Ephesians{Ep\BRperiod}%
-\def\br@Philippians{Ph\BRperiod}%
-\def\br@Colossians{Col\BRperiod}%
-\def\br@IThessalonians{\BRepistlenumberstyle{1}Th\BRperiod}%
-\def\br@IIThessalonians{\BRepistlenumberstyle{2}Th\BRperiod}%
-\def\br@ITimothy{\BRepistlenumberstyle{1}Tm\BRperiod}%
-\def\br@IITimothy{\BRepistlenumberstyle{2}Tm\BRperiod}%
-\def\br@Titus{Tt\BRperiod}%
-\def\br@Philemon{Phm\BRperiod}%
-\def\br@Hebrews{He\BRperiod}%
-\def\br@James{Jc\BRperiod}%
-\def\br@IPeter{\BRepistlenumberstyle{1}P\BRperiod}%
-\def\br@IIPeter{\BRepistlenumberstyle{2}P\BRperiod}%
-\def\br@IJohn{\BRepistlenumberstyle{1}Jn\BRperiod}%
-\def\br@IIJohn{\BRepistlenumberstyle{2}Jn\BRperiod}%
-\def\br@IIIJohn{\BRepistlenumberstyle{3}Jn\BRperiod}%
-\def\br@Jude{Jude}%
-\def\br@Revelation{Ap\BRperiod}}
+\newcommand*{\brabbrvname@catholic}[1][]{%
+\csdef{br#1@Genesis}{Gn\BRperiod}%
+\csdef{br#1@Exodus}{Ex\BRperiod}%
+\csdef{br#1@Leviticus}{Lv\BRperiod}%
+\csdef{br#1@Numbers}{Nb\BRperiod}%
+\csdef{br#1@Deuteronomy}{Dt\BRperiod}%
+\csdef{br#1@Joshua}{Jos\BRperiod}%
+\csdef{br#1@Judges}{Jg\BRperiod}%
+\csdef{br#1@Ruth}{Rt\BRperiod}%
+\csdef{br#1@ISamuel}{\BRbooknumberstyle{1}S\BRperiod}%
+\csdef{br#1@IISamuel}{\BRbooknumberstyle{2}S\BRperiod}%
+\csdef{br#1@IKings}{\BRbooknumberstyle{1}R\BRperiod}%
+\csdef{br#1@IIKings}{\BRbooknumberstyle{2}R\BRperiod}%
+\csdef{br#1@IChronicles}{\BRbooknumberstyle{1}Ch\BRperiod}%
+\csdef{br#1@IIChronicles}{\BRbooknumberstyle{2}Ch\BRperiod}%
+\csdef{br#1@Ezra}{Esd\BRperiod}%
+\csdef{br#1@Nehemiah}{Ne\BRperiod}%
+\csdef{br#1@Tobit}{Tb\BRperiod}%
+\csdef{br#1@Judith}{Jdt\BRperiod}%
+\csdef{br#1@Esther}{Est\BRperiod}%
+\csdef{br#1@IMaccabees}{\BRbooknumberstyle{1}M\BRperiod}%
+\csdef{br#1@IIMaccabees}{\BRbooknumberstyle{2}M\BRperiod}%
+\csdef{br#1@Job}{Jb\BRperiod}%
+\csdef{br#1@Psalms}{Ps\BRperiod}%
+\csdef{br#1@Proverbs}{Pr\BRperiod}%
+\csdef{br#1@Ecclesiastes}{Qo\BRperiod}%
+\csdef{br#1@SongofSongs}{Ct\BRperiod}%
+\csdef{br#1@Wisdom}{Sg\BRperiod}%
+\csdef{br#1@Ecclesiasticus}{Si\BRperiod}%
+\csdef{br#1@Isaiah}{Is\BRperiod}%
+\csdef{br#1@Jeremiah}{Jr\BRperiod}%
+\csdef{br#1@Lamentations}{Lm\BRperiod}%
+\csdef{br#1@Baruch}{Ba\BRperiod}%
+\csdef{br#1@Ezekiel}{Ez\BRperiod}%
+\csdef{br#1@Daniel}{Dn\BRperiod}%
+\csdef{br#1@Hosea}{Os\BRperiod}%
+\csdef{br#1@Joel}{Jl\BRperiod}%
+\csdef{br#1@Amos}{Am\BRperiod}%
+\csdef{br#1@Obadiah}{Ab\BRperiod}%
+\csdef{br#1@Jonah}{Jon\BRperiod}%
+\csdef{br#1@Micah}{Mi\BRperiod}%
+\csdef{br#1@Nahum}{Na\BRperiod}%
+\csdef{br#1@Habakkuk}{Ha\BRperiod}%
+\csdef{br#1@Zephaniah}{So\BRperiod}%
+\csdef{br#1@Haggai}{Ag\BRperiod}%
+\csdef{br#1@Zechariah}{Za\BRperiod}%
+\csdef{br#1@Malachi}{Ml\BRperiod}%
+\csdef{br#1@Matthew}{Mt\BRperiod}%
+\csdef{br#1@Mark}{Mc\BRperiod}%
+\csdef{br#1@Luke}{Lc\BRperiod}%
+\csdef{br#1@John}{Jn\BRperiod}%
+\csdef{br#1@Acts}{Ac\BRperiod}%
+\csdef{br#1@Romans}{Rm\BRperiod}%
+\csdef{br#1@ICorinthians}{\BRepistlenumberstyle{1}Co\BRperiod}%
+\csdef{br#1@IICorinthians}{\BRepistlenumberstyle{2}Co\BRperiod}%
+\csdef{br#1@Galatians}{Ga\BRperiod}%
+\csdef{br#1@Ephesians}{Ep\BRperiod}%
+\csdef{br#1@Philippians}{Ph\BRperiod}%
+\csdef{br#1@Colossians}{Col\BRperiod}%
+\csdef{br#1@IThessalonians}{\BRepistlenumberstyle{1}Th\BRperiod}%
+\csdef{br#1@IIThessalonians}{\BRepistlenumberstyle{2}Th\BRperiod}%
+\csdef{br#1@ITimothy}{\BRepistlenumberstyle{1}Tm\BRperiod}%
+\csdef{br#1@IITimothy}{\BRepistlenumberstyle{2}Tm\BRperiod}%
+\csdef{br#1@Titus}{Tt\BRperiod}%
+\csdef{br#1@Philemon}{Phm\BRperiod}%
+\csdef{br#1@Hebrews}{He\BRperiod}%
+\csdef{br#1@James}{Jc\BRperiod}%
+\csdef{br#1@IPeter}{\BRepistlenumberstyle{1}P\BRperiod}%
+\csdef{br#1@IIPeter}{\BRepistlenumberstyle{2}P\BRperiod}%
+\csdef{br#1@IJohn}{\BRepistlenumberstyle{1}Jn\BRperiod}%
+\csdef{br#1@IIJohn}{\BRepistlenumberstyle{2}Jn\BRperiod}%
+\csdef{br#1@IIIJohn}{\BRepistlenumberstyle{3}Jn\BRperiod}%
+\csdef{br#1@Jude}{Jude}%
+\csdef{br#1@Revelation}{Ap\BRperiod}}
 %  \end{macrocode}
 %
 % \subsection{Aliases}
@@ -545,7 +551,116 @@
 \newcommand*\br@Ap{\br@Revelation}
 \newcommand*\br@Apoc{\br@Revelation}
 %  \end{macrocode}
-%
+% Alias from the indexed forms of shorthand to the indexed form of fullhand. 
+%  \begin{macrocode}
+\newcommand*\bri@Gn{\ifdef{\bri@Genesis}{\bri@Genesis}{\br@Genesis}}%
+\newcommand*\bri@Ge{\ifdef{\bri@Genesis}{\bri@Genesis}{\br@Genesis}}%
+\newcommand*\bri@Ex{\ifdef{\bri@Exodus}{\bri@Exodus}{\br@Exodus}}%
+\newcommand*\bri@Lv{\ifdef{\bri@Leviticus}{\bri@Leviticus}{\br@Leviticus}}%
+\newcommand*\bri@Le{\ifdef{\bri@Leviticus}{\bri@Leviticus}{\br@Leviticus}}%
+\newcommand*\bri@Nb{\ifdef{\bri@Numbers}{\bri@Numbers}{\br@Numbers}}%
+\newcommand*\bri@No{\ifdef{\bri@Numbers}{\bri@Numbers}{\br@Numbers}}%
+\newcommand*\bri@Dt{\ifdef{\bri@Deuteronomy}{\bri@Deuteronomy}{\br@Deuteronomy}}%
+\newcommand*\bri@De{\ifdef{\bri@Deuteronomy}{\bri@Deuteronomy}{\br@Deuteronomy}}%
+\newcommand*\bri@Jos{\ifdef{\bri@Joshua}{\bri@Joshua}{\br@Joshua}}%
+\newcommand*\bri@Jg{\ifdef{\bri@Judges}{\bri@Judges}{\br@Judges}}%
+\newcommand*\bri@Rt{\ifdef{\bri@Ruth}{\bri@Ruth}{\br@Ruth}}%
+\newcommand*\bri@Ru{\ifdef{\bri@Ruth}{\bri@Ruth}{\br@Ruth}}%
+\newcommand*\bri@IS{\ifdef{\bri@ISamuel}{\bri@ISamuel}{\br@ISamuel}}%
+\newcommand*\bri@IIS{\ifdef{\bri@IISamuel}{\bri@IISamuel}{\br@IISamuel}}%
+\newcommand*\bri@IR{\ifdef{\bri@IKings}{\bri@IKings}{\br@IKings}}%
+\newcommand*\bri@IIR{\ifdef{\bri@IIKings}{\bri@IIKings}{\br@IIKings}}%
+\newcommand*\bri@ICh{\ifdef{\bri@IChronicles}{\bri@IChronicles}{\br@IChronicles}}%
+\newcommand*\bri@IICh{\ifdef{\bri@IIChronicles}{\bri@IIChronicles}{\br@IIChronicles}}%
+\newcommand*\bri@Esd{\ifdef{\bri@Ezra}{\bri@Ezra}{\br@Ezra}}%
+\newcommand*\bri@Ne{\ifdef{\bri@Nehemiah}{\bri@Nehemiah}{\br@Nehemiah}}%
+\newcommand*\bri@Tb{\ifdef{\bri@Tobit}{\bri@Tobit}{\br@Tobit}}%
+\newcommand*\bri@Jdt{\ifdef{\bri@Judith}{\bri@Judith}{\br@Judith}}%
+\newcommand*\bri@Est{\ifdef{\bri@Esther}{\bri@Esther}{\br@Esther}}%
+\newcommand*\bri@IM{\ifdef{\bri@IMaccabees}{\bri@IMaccabees}{\br@IMaccabees}}%
+\newcommand*\bri@IIM{\ifdef{\bri@IIMaccabees}{\bri@IIMaccabees}{\br@IIMaccabees}}%
+\newcommand*\bri@Jb{\ifdef{\bri@Job}{\bri@Job}{\br@Job}}%
+\newcommand*\bri@Ps{\ifdef{\bri@Psalms}{\bri@Psalms}{\br@Psalms}}%
+\newcommand*\bri@Pr{\ifdef{\bri@Proverbs}{\bri@Proverbs}{\br@Proverbs}}%
+\newcommand*\bri@Qo{\ifdef{\bri@Ecclesiastes}{\bri@Ecclesiastes}{\br@Ecclesiastes}}%
+\newcommand*\bri@Ec{\ifdef{\bri@Ecclesiastes}{\bri@Ecclesiastes}{\br@Ecclesiastes}}%
+\newcommand*\bri@Ct{\ifdef{\bri@SongofSongs}{\bri@SongofSongs}{\br@SongofSongs}}%
+\newcommand*\bri@Ca{\ifdef{\bri@SongofSongs}{\bri@SongofSongs}{\br@SongofSongs}}%
+\newcommand*\bri@Cant{\ifdef{\bri@SongofSongs}{\bri@SongofSongs}{\br@SongofSongs}}%
+\newcommand*\bri@Sg{\ifdef{\bri@Wisdom}{\bri@Wisdom}{\br@Wisdom}} % Sg in English is for Song
+\newcommand*\bri@Si{\ifdef{\bri@Ecclesiasticus}{\bri@Ecclesiasticus}{\br@Ecclesiasticus}}%
+\newcommand*\bri@Is{\ifdef{\bri@Isaiah}{\bri@Isaiah}{\br@Isaiah}}%
+\newcommand*\bri@Es{\ifdef{\bri@Isaiah}{\bri@Isaiah}{\br@Isaiah}}%
+\newcommand*\bri@Jr{\ifdef{\bri@Jeremiah}{\bri@Jeremiah}{\br@Jeremiah}}%
+\newcommand*\bri@Je{\ifdef{\bri@Jeremiah}{\bri@Jeremiah}{\br@Jeremiah}}%
+\newcommand*\bri@Lm{\ifdef{\bri@Lamentations}{\bri@Lamentations}{\br@Lamentations}}%
+\newcommand*\bri@La{\ifdef{\bri@Lamentations}{\bri@Lamentations}{\br@Lamentations}}%
+\newcommand*\bri@Ba{\ifdef{\bri@Baruch}{\bri@Baruch}{\br@Baruch}}%
+\newcommand*\bri@Bar{\ifdef{\bri@Baruch}{\bri@Baruch}{\br@Baruch}}%
+\newcommand*\bri@Ez{\ifdef{\bri@Ezekiel}{\bri@Ezekiel}{\br@Ezekiel}}%
+\newcommand*\bri@Dn{\ifdef{\bri@Daniel}{\bri@Daniel}{\br@Daniel}}%
+\newcommand*\bri@Da{\ifdef{\bri@Daniel}{\bri@Daniel}{\br@Daniel}}%
+\newcommand*\bri@Os{\ifdef{\bri@Hosea}{\bri@Hosea}{\br@Hosea}}%
+\newcommand*\bri@Jl{\ifdef{\bri@Joel}{\bri@Joel}{\br@Joel}}%
+\newcommand*\bri@Jo{\ifdef{\bri@Joel}{\bri@Joel}{\br@Joel}}%
+\newcommand*\bri@Joe{\ifdef{\bri@Joel}{\bri@Joel}{\br@Joel}}%
+\newcommand*\bri@Am{\ifdef{\bri@Amos}{\bri@Amos}{\br@Amos}}%
+\newcommand*\bri@Ab{\ifdef{\bri@Obadiah}{\bri@Obadiah}{\br@Obadiah}}%
+\newcommand*\bri@Abd{\ifdef{\bri@Obadiah}{\bri@Obadiah}{\br@Obadiah}}%
+\newcommand*\bri@Jon{\ifdef{\bri@Jonah}{\bri@Jonah}{\br@Jonah}}%
+\newcommand*\bri@Mi{\ifdef{\bri@Micah}{\bri@Micah}{\br@Micah}}%
+\newcommand*\bri@Mich{\ifdef{\bri@Micah}{\bri@Micah}{\br@Micah}}%
+\newcommand*\bri@Na{\ifdef{\bri@Nahum}{\bri@Nahum}{\br@Nahum}}%
+\newcommand*\bri@Ha{\ifdef{\bri@Habakkuk}{\bri@Habakkuk}{\br@Habakkuk}}%
+\newcommand*\bri@So{\ifdef{\bri@Zephaniah}{\bri@Zephaniah}{\br@Zephaniah}}%
+\newcommand*\bri@Soph{\ifdef{\bri@Zephaniah}{\bri@Zephaniah}{\br@Zephaniah}}%
+\newcommand*\bri@Ag{\ifdef{\bri@Haggai}{\bri@Haggai}{\br@Haggai}}%
+\newcommand*\bri@Za{\ifdef{\bri@Zechariah}{\bri@Zechariah}{\br@Zechariah}}%
+\newcommand*\bri@Zach{\ifdef{\bri@Zechariah}{\bri@Zechariah}{\br@Zechariah}}%
+\newcommand*\bri@Ml{\ifdef{\bri@Malachi}{\bri@Malachi}{\br@Malachi}}%
+\newcommand*\bri@Mt{\ifdef{\bri@Matthew}{\bri@Matthew}{\br@Matthew}}%
+\newcommand*\bri@Mc{\ifdef{\bri@Mark}{\bri@Mark}{\br@Mark}}%
+\newcommand*\bri@Lc{\ifdef{\bri@Luke}{\bri@Luke}{\br@Luke}}%
+\newcommand*\bri@Lu{\ifdef{\bri@Luke}{\bri@Luke}{\br@Luke}}%
+\newcommand*\bri@Jn{\ifdef{\bri@John}{\bri@John}{\br@John}}%
+\newcommand*\bri@Ac{\ifdef{\bri@Acts}{\bri@Acts}{\br@Acts}}%
+\newcommand*\bri@Act{\ifdef{\bri@Acts}{\bri@Acts}{\br@Acts}}%
+\newcommand*\bri@Rm{\ifdef{\bri@Romans}{\bri@Romans}{\br@Romans}}%
+\newcommand*\bri@Ro{\ifdef{\bri@Romans}{\bri@Romans}{\br@Romans}}%
+\newcommand*\bri@ICo{\ifdef{\bri@ICorinthians}{\bri@ICorinthians}{\br@ICorinthians}}%
+\newcommand*\bri@IICo{\ifdef{\bri@IICorinthians}{\bri@IICorinthians}{\br@IICorinthians}}%
+\newcommand*\bri@Ga{\ifdef{\bri@Galatians}{\bri@Galatians}{\br@Galatians}}%
+\newcommand*\bri@Ep{\ifdef{\bri@Ephesians}{\bri@Ephesians}{\br@Ephesians}}%
+\newcommand*\bri@Ph{\ifdef{\bri@Philippians}{\bri@Philippians}{\br@Philippians}}%
+\newcommand*\bri@Col{\ifdef{\bri@Colossians}{\bri@Colossians}{\br@Colossians}}%
+\newcommand*\bri@ITh{\ifdef{\bri@IThessalonians}{\bri@IThessalonians}{\br@IThessalonians}}%
+\newcommand*\bri@IITh{\ifdef{\bri@IIThessalonians}{\bri@IIThessalonians}{\br@IIThessalonians}}%
+\newcommand*\bri@ITm{\ifdef{\bri@ITimothy}{\bri@ITimothy}{\br@ITimothy}}%
+\newcommand*\bri@ITi{\ifdef{\bri@ITimothy}{\bri@ITimothy}{\br@ITimothy}}%
+\newcommand*\bri@IITm{\ifdef{\bri@IITimothy}{\bri@IITimothy}{\br@IITimothy}}%
+\newcommand*\bri@IITi{\ifdef{\bri@IITimothy}{\bri@IITimothy}{\br@IITimothy}}%
+\newcommand*\bri@Tt{\ifdef{\bri@Titus}{\bri@Titus}{\br@Titus}}%
+\newcommand*\bri@Ti{\ifdef{\bri@Titus}{\bri@Titus}{\br@Titus}}%
+\newcommand*\bri@Phm{\ifdef{\bri@Philemon}{\bri@Philemon}{\br@Philemon}}%
+\newcommand*\bri@He{\ifdef{\bri@Hebrews}{\bri@Hebrews}{\br@Hebrews}}%
+\newcommand*\bri@Hebr{\ifdef{\bri@Hebrews}{\bri@Hebrews}{\br@Hebrews}}%
+\newcommand*\bri@Jc{\ifdef{\bri@James}{\bri@James}{\br@James}}%
+\newcommand*\bri@Ja{\ifdef{\bri@James}{\bri@James}{\br@James}}%
+\newcommand*\bri@Jacq{\ifdef{\bri@James}{\bri@James}{\br@James}}%
+\newcommand*\bri@IP{\ifdef{\bri@IPeter}{\bri@IPeter}{\br@IPeter}}%
+\newcommand*\bri@IPe{\ifdef{\bri@IPeter}{\bri@IPeter}{\br@IPeter}}%
+\newcommand*\bri@IPi{\ifdef{\bri@IPeter}{\bri@IPeter}{\br@IPeter}}%
+\newcommand*\bri@IIP{\ifdef{\bri@IIPeter}{\bri@IIPeter}{\br@IIPeter}}%
+\newcommand*\bri@IIPe{\ifdef{\bri@IIPeter}{\bri@IIPeter}{\br@IIPeter}}%
+\newcommand*\bri@IIPi{\ifdef{\bri@IIPeter}{\bri@IIPeter}{\br@IIPeter}}%
+\newcommand*\bri@IJn{\ifdef{\bri@IJohn}{\bri@IJohn}{\br@IJohn}}%
+\newcommand*\bri@IIJn{\ifdef{\bri@IIJohn}{\bri@IIJohn}{\br@IIJohn}}%
+\newcommand*\bri@IIIJn{\ifdef{\bri@IIIJohn}{\bri@IIIJohn}{\br@IIIJohn}}%
+\newcommand*\bri@Ju{\ifdef{\bri@Jude}{\bri@Jude}{\br@Jude}}%
+\newcommand*\bri@Jud{\ifdef{\bri@Jude}{\bri@Jude}{\br@Jude}}%
+\newcommand*\bri@Ap{\ifdef{\bri@Revelation}{\bri@Revelation}{\br@Revelation}}
+\newcommand*\bri@Apoc{\ifdef{\bri@Revelation}{\bri@Revelation}{\br@Revelation}}
+%  \end{macrocode}
 % \subsection{Styles}
 %
 %  \begin{macrocode}
@@ -588,6 +703,10 @@
 \renewcommand*{\BRvrsep}{\mbox{--}\nobreak}%
 \renewcommand*{\BRvsep}{,~}%
 \renewcommand*{\BRperiod}{}}
+\newcommand*{\brs@jerusalemfullindex}{
+	\brs@jerusalem%
+	\brfullname[i]%
+}
 
 \newcommand*{\brs@colombe}{%
 \brabbrvname@protestant
@@ -608,6 +727,10 @@
 \renewcommand*{\BRvrsep}{\mbox{--}\nobreak}%
 \renewcommand*{\BRvsep}{,}%
 \renewcommand*{\BRperiod}{}}
+\newcommand*{\brs@colombefullindex}{
+	\brs@colombe%
+	\brfullname[i]%
+}
 
 \newcommand*{\brs@colombefull}{%
 \brfullname@protestant
@@ -648,6 +771,10 @@
 \renewcommand*{\BRvrsep}{\mbox{-}\nobreak}%
 \renewcommand*{\BRvsep}{,}%
 \renewcommand*{\BRperiod}{}}
+\newcommand*{\brs@NBSfullindex}{
+	\brs@NBS%
+	\brfullname[i]%
+}
 
 \newcommand*{\brs@NBSfull}{%
 \brfullname@protestant
@@ -669,10 +796,10 @@
 \renewcommand*{\BRvsep}{,}%
 \renewcommand*{\BRperiod}{}}
 
-\newcommand*{\brs@TOB}{%
+\newcommand*{\brs@TOB}[1][]{%
 \brabbrvname@catholic
 % TOB uses Esaie like protestant Bibles
-\def\br@Isaiah{\BRbookof Es}%
+\csdef{br#1@Isaiah}{\BRbookof Es}%
 \renewcommand*{\BRbooknumberstyle}[1]{##1~}%
 \renewcommand*{\BRepistlenumberstyle}[1]{##1~}%
 \renewcommand*{\BRbooktitlestyle}[1]{##1}%
@@ -690,11 +817,15 @@
 \renewcommand*{\BRvrsep}{\mbox{-}\nobreak}%
 \renewcommand*{\BRvsep}{,~}%
 \renewcommand*{\BRperiod}{}}
+\newcommand*{\brs@TOBfullindex}{
+	\brs@TOB%
+	\brfullname[i]%
+}
 
-\newcommand*{\brs@TOBfull}{%
+\newcommand*{\brs@TOBfull}[1][]{%
 \brfullname@catholic
 % TOB uses Esaie like protestant Bibles
-\def\br@Isaiah{\BRbookof \'Esa\"ie}%
+\csdef{br#1@Isaiah}{\BRbookof \'Esa\"ie}%
 \renewcommand*{\BRbooknumberstyle}[1]{##1~}%
 \renewcommand*{\BRepistlenumberstyle}[1]{##1~}%
 \renewcommand*{\BRbooktitlestyle}[1]{##1}%
@@ -750,13 +881,13 @@ chapitre \protect\numberstringnum{##1}}%
 % \subsection{Protestant Book Names}
 %
 %  \begin{macrocode}
-\newcommand*{\brfullname@protestant}{%
-\brfullname@catholic%
-\def\br@Isaiah{\BRbookofe \'Esa\"ie}%
+\newcommand*{\brfullname@protestant}[1][]{%
+\brfullname@catholic[#1]%
+\csdef{br#1@Isaiah}{\BRbookofe \'Esa\"ie}%
 }
-\newcommand*{\brabbrvname@protestant}{%
-\brabbrvname@catholic%
-\def\br@Isaiah{\BRbookof Es}%
+\newcommand*{\brabbrvname@protestant}[1][]{%
+\brabbrvname@catholic[#1]%
+\csdef{br#1@Isaiah}{\BRbookof Es}%
 }
 %  \end{macrocode}
 %
@@ -1342,12 +1473,17 @@ chapitre \protect\numberstringnum{##1}}%
 %  \begin{macrocode}
 \DeclareOption{default}{\brs@default}
 \DeclareOption{defaultshorter}{\brs@defaultshorter}
+\DeclareOption{defaultshorterfullindex}{\brs@defaultshorterfullindex}
 \DeclareOption{jerusalem}{\brs@jerusalem}
+\DeclareOption{jerusalemfullindex}{\brs@jerusalemfullindex}
 \DeclareOption{colombe}{\brs@colombe}
+\DeclareOption{colombefullindex}{\brs@colombefullindex}
 \DeclareOption{colombefull}{\brs@colombefull}
 \DeclareOption{NBS}{\brs@NBS}
+\DeclareOption{NBSfullindex}{\brs@NBSfullindex}
 \DeclareOption{NBSfull}{\brs@NBSfull}
 \DeclareOption{TOB}{\brs@TOB}
+\DeclareOption{TOBfullindex}{\brs@TOBfullindex}
 \DeclareOption{TOBfull}{\brs@TOBfull}
 \DeclareOption{text}{\brs@text}
 \DeclareOption{indexalphac}{\refmap@alphac}
@@ -1359,17 +1495,20 @@ chapitre \protect\numberstringnum{##1}}%
 \DeclareOption{indexTOB}{\refmap@TOB}
 \DeclareOption{indexTanak}{\refmap@Tanak}
 % Use Catholic names by default
-\let\brfullname\brfullname@catholic
-\let\brabbrvname\brabbrvname@catholic
+\renewcommand{\brfullname}[1][]{\brfullname@catholic[#1]}%
+\renewcommand{\brabbrvname}[1][]{\brabbrvname@catholic[#1]}%
 \DeclareOption{catholic}{%
-\let\brfullname\brfullname@catholic%
-\let\brabbrvname\brabbrvname@catholic}
+	\renewcommand{\brfullname}[1][]{\brfullname@catholic[#1]}%
+	\renewcommand{\brabbrvname}[1][]{\brabbrvname@catholic[#1]}%
+}
 \DeclareOption{catholique}{%
-\let\brfullname\brfullname@catholic%
-\let\brabbrvname\brabbrvname@catholic}
+	\renewcommand{\brfullname}[1][]{\brfullname@catholic[#1]}%
+	\renewcommand{\brabbrvname}[1][]{\brabbrvname@catholic[#1]}%
+}
 \DeclareOption{protestant}{%
-\let\brfullname\brfullname@protestant
-\let\brabbrvname\brabbrvname@protestant}
+	\renewcommand{\brfullname}[1][]{\brfullname@protestant[#1]}%
+	\renewcommand{\brabbrvname}[1][]{\brabbrvname@protestant[#1]}%
+}
 \brfullname
 \ProcessOptions
 %  \end{macrocode}

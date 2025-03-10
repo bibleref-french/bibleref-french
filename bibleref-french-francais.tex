@@ -1,5 +1,5 @@
 \documentclass{ltxdoc}
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{bibleref-french}
@@ -42,10 +42,12 @@ Les styles sont notés dans le tableau~\ref{tab:styles}.
 \end{center}
 \end{table}
 
+Les styles qui utilisent des formes abrégées possèdent chacun une variante du même nom suffixé par \texsf{fullindex}. Cette variante permet d'utiliser les formes abrégées dans le corps du texte, mais les formes étendues dans l'index.
+
 \subsection{Noms catholique ou protestant des livres}
 
 Un livre de l'Ancien Testament s'appelle Isaïe chez les catholiques et Ésaïe chez les protestants.
-Pour cette raison ce package fournit deux options supplémentaires :  \textsf{catholic} (ou \textsf{catholique}) et \textsf{protestant}. 
+Pour cette raison ce package fournit deux options supplémentaires :  \textsf{catholic} (ou \textsf{catholique}) et \textsf{protestant}.
 
 L'option \textsf{catholic} ne fait habituellement rien, puisque c'est l'option par défaut. Cependant, appeler  \verb!\brfullname@catholic! fournira un résumé de tous les noms catholiques de livres.
 
@@ -87,11 +89,11 @@ Le package \verb|bibleref| autorise à choisir l'ordre des livres pour générer
 Cependant il utilise le nom complet des livres pour les trier, ce qui est problématique en français à cause des accents dans les noms.
 
 Pour résoudre cela, ce package modifie \verb|bibleref| pour utiliser les abréviations à la place des noms complets.
- 
+
 En conséquence, \cs{biblerefmap} doit être utilisé avec les \emph{exactes} chaînes de caractères utilisés dans les commandes \cs{ibibleref}. Par exemple, si vous utilisez \verb|\ibibleref{Jn}(3:16)|, vous devrez déclarer \verb|\biblerefmap{Jn}{43}| à la place de \verb|\biblerefmap{Jean}{43}|
 
 
- Si vous utilisez la commande \cs{ibibleref}, vous pouvez constater que l'ordre de tri dans l'index n'est par défaut pas très bon. Par exemple, livres numérotés sont classés à la lettre `i'. 
+ Si vous utilisez la commande \cs{ibibleref}, vous pouvez constater que l'ordre de tri dans l'index n'est par défaut pas très bon. Par exemple, livres numérotés sont classés à la lettre `i'.
 
 Le package fournit des options pour un meilleur tri\footcite[Pour l'Ancien Testament les protestants suivent le canon juif pour son contenu mais utilisent l'ordre du canon catholique, voir][]{canons}. Au chargement du package, vous pouvez choisir l'une de ces options :
  \begin{description}
