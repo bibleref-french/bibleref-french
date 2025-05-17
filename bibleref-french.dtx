@@ -14,8 +14,8 @@
 %
 % \iffalse
 %<package>\NeedsTeXFormat{LaTeX2e}
-%<package|extract|driver>\def\BRFfileversion{v2.3.3}%
-%<package|extract|driver>\def\BRFfiledate{2019/12/14}%
+%<package|extract|driver>\def\BRFfileversion{v2.4.0}%
+%<package|extract|driver>\def\BRFfiledate{2025/05/17}%
 %<package|extract|driver>\def\BRFfileinfo{French translation of the bibleref package}%
 %<package>\ProvidesPackage{bibleref-french}
 %<package>   [\BRFfiledate\space\BRFfileversion\space\BRFfileinfo]
@@ -44,6 +44,7 @@
 % \fi
 %
 % \CheckSum{0}
+% \changes{v2.4.0}{2025/05/17}{News styles suffixed by fullindex: as original style, but the names in the index are full}
 % \changes{v2.3.3}{2019/02/14}{Compatibility with the new version of bibleref}
 % \changes{v2.3.2}{2019/02/20}{Compatibility with the new version of bibleref}
 % \changes{v2.3.1}{2012/07/14}{Accent on Ésaïe}
@@ -55,7 +56,6 @@
 % \changes{v2.0}{2011/06/18}{Make dtx, add styles and protestant/catholic
 %                            options, add index patch, add documentation}
 % \changes{v1.0.2}{2011/04/13}{Use non-breakable spaces in book names}
-%
 % \GetFileInfo{bibleref-french.dtx}
 %
 % \title{The \textsf{bibleref-french} package\thanks{Version 2.3}}
@@ -95,9 +95,9 @@
 %\end{center}
 %\end{table}
 %\selectlanguage{english}
-% 
-% When a style uses abbrevated forms, another style, with the same suffixed with \textsf{fullindex} is provided. 
-% This additional style use abbrevated forms for the main text, but full forms for index. 
+%
+% When a style uses abbrevated forms, another style, with the same suffixed with \textsf{fullindex} is provided.
+% This additional style use abbrevated forms for the main text, but full forms for index.
 % \subsection{Catholic and Protestant book names}
 %
 % A book of the Old Testament is called Isa\"ie by  catholics and \'Esa\"ie by protestants.
@@ -551,7 +551,7 @@
 \newcommand*\br@Ap{\br@Revelation}
 \newcommand*\br@Apoc{\br@Revelation}
 %  \end{macrocode}
-% Alias from the indexed forms of shorthand to the indexed form of fullhand. 
+% Alias from the indexed forms of shorthand to the indexed form of fullhand.
 %  \begin{macrocode}
 \newcommand*\bri@Gn{\ifdef{\bri@Genesis}{\bri@Genesis}{\br@Genesis}}%
 \newcommand*\bri@Ge{\ifdef{\bri@Genesis}{\bri@Genesis}{\br@Genesis}}%
